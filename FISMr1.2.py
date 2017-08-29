@@ -105,32 +105,41 @@ def training(model, dataset, batch_size, epochs, num_negatives):
 
         writer = tf.summary.FileWriter('./graphs', sess.graph)
         writer.close()
+
         data = Data(dataset.trainMatrix, dataset.trainList, batch_size, num_negatives)
         # model, sess, trainList, testRatings, testNegatives,
         evaluate = Evaluate(model, sess, dataset.trainList, dataset.testRatings, dataset.testNegatives)
+
         t = time()
         index = 0
         total_loss = 0.0
-        while data.epoch < epochs:
+        epoch_count = 0
 
-            training_batch(t, index, model, sess, data)
-            saver.save(sess, 'checkpoints/FISM', index)
+        while epoch_count < epochs:
 
-            if data.flag :   #compute train loss for this epoch
+            if data.last_batch:
+                data.data_shuffle()
+                epoch_count += 1
                 evaluate.eval()
                 training_loss(model, sess, data)
 
+            training_batch(t, epoch_count, index, model, sess, data)
+            saver.save(sess, 'checkpoints/FISM', index)
             index += 1
 
-def training_batch(t, index, model, sess, data):
-    user_input, num_idx, item_input, labels = data.batch(index, IsOptimize=True)
+
+# @profile
+def training_batch(t, epoch, index, model, sess, data):
+    # user_input, num_idx, item_input, labels = data.batch(index, IsOptimize=True)
+
+    user_input, num_idx, item_input, labels = data.batch_gen(index)
 
     feed_dict = {model.user_input: user_input, model.num_idx: num_idx[:, None], model.item_input: item_input[:, None],
                  model.labels: labels[:, None]}
     batch_loss, _ = sess.run([model.loss, model.optimizer], feed_dict)
     if index%100 == 0:
         print('(%.4f s) %d epoch: Batch loss at step %2d: %5.2f' % (
-            time() - t, data.epoch, index, batch_loss))
+            time() - t, epoch, index, batch_loss))
         t = time()
 
 def training_loss(model, sess, data):
