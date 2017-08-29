@@ -1,6 +1,5 @@
 from __future__ import absolute_import
 from __future__ import division
-from __future__ import print_function
 
 import os
 
@@ -8,6 +7,9 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
 import cProfile
 import tensorflow as tf
+import numpy as np
+import logging
+
 from time import time
 
 from Dataset import Dataset
@@ -94,10 +96,10 @@ class FISM:
         self._create_inference()
         self._create_loss()
         self._create_optimizer()
-        print("already build the computing graph...")
+        logging.info("already build the computing graph...")
 
 def training(model, dataset, batch_size, epochs, num_negatives):
-    print("begin training the FISM model...")
+    logging.info("begin training the FISM model...")
     #saver = tf.train.Saver()
     #mkdir('checkpoints') #undifined
     with tf.Session() as sess:
@@ -121,7 +123,9 @@ def training(model, dataset, batch_size, epochs, num_negatives):
                 training_loss(epoch_count, model, sess, data)
                 data.data_shuffle()
                 epoch_count += 1
-                evaluate.eval()
+                (hits, ndcgs, losses) = evaluate.eval()
+                hr, ndcg, test_loss = np.array(hits).mean(), np.array(ndcgs).mean(), np.array(losses).mean()
+                logging.info("epoch %d: hr = %.2f, ndcg = %.2f, test_loss = %.2f" % (epoch_count, hr, ndcg, test_loss))
 
             training_batch(t, epoch_count, index, model, sess, data)
             #saver.save(sess, 'checkpoints/FISM', index)
@@ -136,10 +140,8 @@ def training_batch(t, epoch, index, model, sess, data):
 
     feed_dict = {model.user_input: user_input, model.num_idx: num_idx[:, None], model.item_input: item_input[:, None], model.labels: labels[:, None]}
     batch_loss, _ = sess.run([model.loss, model.optimizer], feed_dict)
-    if index%5000 == 0:
-        print('(%.4f s) %d epoch: Batch loss at step %2d: %5.2f' % (
-            time() - t, epoch, index, batch_loss))
-        t = time()
+    # if index%5000 == 0:
+    #     logging.info('(%.4f s) %d epoch: Batch loss at step %2d: %5.2f' % (time() - t, epoch, index, batch_loss))
 
 def training_loss(epoch_count, model, sess, data):
     t = time()
@@ -150,12 +152,13 @@ def training_loss(epoch_count, model, sess, data):
         feed_dict = {model.user_input: user_input, model.num_idx: num_idx[:, None], model.item_input: item_input[:, None],model.labels: labels[:, None]}
         train_loss += sess.run(model.loss, feed_dict)
         index += 1
-    print('(%.4f s) epoch %d : train loss: %5.2f' % (time() - t, epoch_count - 1, train_loss / index))
+    logging.info('(%.4f s) epoch %d : train loss: %5.2f' % (time() - t, epoch_count, train_loss / index))
 
 #(self, num_items, batch_size, learning_rate, embedding_size, lambda_bilinear, gamma_bilinear)
 if __name__=='__main__':
 
     args = parse_args()
+    logging.basicConfig(filename="log_lr%.4f_bs%d" %(args.lr, args.batch_size), level = logging.INFO)
     regs = eval(args.regs)
     dataset = Dataset(args.path + args.dataset)
     model = FISM(dataset.num_items, args.batch_size, args.lr, args.embed_size, args.alpha, regs)

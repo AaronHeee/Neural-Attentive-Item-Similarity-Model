@@ -54,45 +54,46 @@ class Evaluate:
         Evaluate the performance (Hit_Ratio, NDCG) of top-K recommendation
         Return: score of each test rating.
         """
-
-        hits, ndcgs = [],[]
-        if(self.num_thread > 1): # Multi-thread
-            pool = multiprocessing.Pool(processes=self.num_thread)
-            res = pool.map(self.eval_one_rating, range(len(self.testRatings)))
-            pool.close()
-            pool.join()
-            hits = [r[0] for r in res]
-            ndcgs = [r[1] for r in res]
-            return (hits, ndcgs)
-        # Single thread
+        hits, ndcgs, losses = [],[],[]
+        # if(self.num_thread > 1): # Multi-thread
+        #     pool = multiprocessing.Pool(processes=self.num_thread)
+        #     res = pool.map(self.eval_one_rating, range(len(self.testRatings)))
+        #     pool.close()
+        #     pool.join()
+        #     hits = [r[0] for r in res]
+        #     ndcgs = [r[1] for r in res]
+        #     return (hits, ndcgs)
+        # # Single thread
         num_hits = 0
         for idx in xrange(len(self.testRatings)):
-            (hr,ndcg) = self.eval_one_rating(idx)
+            (hr,ndcg,loss) = self.eval_one_rating(idx)
             hits.append(hr)
-            num_hits += hr
             ndcgs.append(ndcg)
-        print str(num_hits)
-        # print ndcgs
-
-        return (hits, ndcgs)
+            losses.append(loss)
+        return (hits, ndcgs, losses)
 
     def eval_one_rating(self, idx):
+
         map_item_score = {}
         rating = self.testRatings[idx]
         items = self.testNegatives[idx]
         gtItem = rating[1]
-        predictions = self.sess.run((self.model.output), feed_dict = self.DictList[idx])
+        labels = np.zeros(len(items))[:, None]
+        labels[-1] = 1
+        feed_dict = self.DictList[idx]
+        feed_dict[self.model.labels] = labels
+        predictions,loss = self.sess.run([self.model.output,self.model.loss], feed_dict = feed_dict)
 
         for i in xrange(len(items)):
             item = items[i]
             map_item_score[item] = predictions[i]
         # items.pop()
-
         # Evaluate top rank list
+
         ranklist = heapq.nlargest(self.K, map_item_score, key=map_item_score.get)
         hr = self.getHitRatio(ranklist, gtItem)
         ndcg = self.getNDCG(ranklist, gtItem)
-        return (hr, ndcg)
+        return (hr, ndcg, loss)
 
     def getHitRatio(self, ranklist, gtItem):
         for item in ranklist:
