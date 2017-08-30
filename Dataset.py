@@ -6,6 +6,7 @@ Processing datasets.
 '''
 import scipy.sparse as sp
 import numpy as np
+from time import time
 
 class Dataset(object):
     '''
@@ -143,14 +144,15 @@ class Data:
         self._preprocess()
 
     def _preprocess(self):    #generate the masked batch list
+        t = time()
         self.user_input_list,self.num_idx_list, self.item_input_list, self.labels_list = [], [], [], []
         for i in range(self.num_batch):
-            print "%d in %d" % (i, self.num_batch)
             ui, ni, ii, l = self._get_train_batch(self.index, i)
             self.user_input_list.append(ui)
             self.num_idx_list.append(ni)
             self.item_input_list.append(ii)
             self.labels_list.append(l)
+        print "(%.4f s) already preprocess batch ..." % (time() - t)
 
     def _get_train_data(self):
         user_input, item_input, labels = [],[],[]
@@ -180,12 +182,12 @@ class Data:
             user_idx = self.user_input[index[idx]]
             item_idx = self.item_input[index[idx]]
             nonzero_row = self.list[user_idx]
-            nonzero_row = self._remove_item(self.num_items+1, nonzero_row, user_idx)
+            nonzero_row = self._remove_item(self.num_items, nonzero_row, user_idx)
             user_list.append(nonzero_row)
             num_list.append(len(nonzero_row))
             item_list.append(item_idx)
             labels_list.append(self.labels[index[idx]])
-        user_input = np.array(self._add_mask(self.num_items+1, user_list, num_list))
+        user_input = np.array(self._add_mask(self.num_items, user_list, num_list))
         num_idx = np.array(num_list)
         item_input = np.array(item_list)
         labels = np.array(labels_list)

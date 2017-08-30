@@ -18,7 +18,7 @@ from time import time
 
 class Evaluate:
 
-    def __init__(self, model, sess, trainList, testRatings, testNegatives, K = 5, num_thread = 1):
+    def __init__(self, model, sess, trainList, testRatings, testNegatives, K = 10, num_thread = 1):
         self.model = model
         self.sess = sess
         self.trainList = trainList
@@ -48,7 +48,7 @@ class Evaluate:
             DictList.append(feed_dict)
         print("already load the evaluate model...")
         return DictList
-
+    
     def eval(self):
         """
         Evaluate the performance (Hit_Ratio, NDCG) of top-K recommendation
@@ -71,7 +71,8 @@ class Evaluate:
             ndcgs.append(ndcg)
             losses.append(loss)
         return (hits, ndcgs, losses)
-
+    
+    #@profile
     def eval_one_rating(self, idx):
 
         map_item_score = {}

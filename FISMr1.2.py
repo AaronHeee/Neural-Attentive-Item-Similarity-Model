@@ -37,7 +37,7 @@ def parse_args():
                         help='Index of coefficient of embedding vector')
     parser.add_argument('--num_neg', type=int, default=4,
                         help='Number of negative instances to pair with a positive instance.')
-    parser.add_argument('--lr', type=float, default=0.001,
+    parser.add_argument('--lr', type=float, default=0.01,
                         help='Learning rate.')
     return parser.parse_args()
 
@@ -62,11 +62,11 @@ class FISM:
 
     def _create_variables(self):
         with tf.name_scope("embedding"):  # The embedding initialization is unknown now
-            c1 = tf.Variable(tf.truncated_normal(shape=[self.num_items+1, self.embedding_size], mean=0.0, stddev=0.01), #why [0, 3707)?
+            c1 = tf.Variable(tf.truncated_normal(shape=[self.num_items, self.embedding_size], mean=0.0, stddev=0.01), #why [0, 3707)?
                                                  name='items_embeddings_for_users', dtype=tf.float32)
             c2 = tf.constant(0.0, tf.float32, [1, self.embedding_size])
             self.embedding_Q_ = tf.concat([c1, c2], 0)
-            self.embedding_Q = tf.Variable(tf.truncated_normal(shape=[self.num_items+1, self.embedding_size], mean=0.0, stddev=0.01),
+            self.embedding_Q = tf.Variable(tf.truncated_normal(shape=[self.num_items, self.embedding_size], mean=0.0, stddev=0.01),
                                                                 name='items_embeddings_for_items', dtype=tf.float32)
             self.bias = tf.Variable(tf.zeros(self.num_items))
 
