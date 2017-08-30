@@ -1,0 +1,52 @@
+INFO:root:already build the computing graph...
+INFO:root:begin training the FISM model...
+INFO:root:initialized
+INFO:root:(18.1274 s) epoch 0 : train loss:  0.27
+INFO:root:(67.4998 s) epoch 0: hr = 0.71, ndcg = 0.41, test_loss = 0.18
+INFO:root:(28.2760 s) epoch 1 : train loss:  0.24
+INFO:root:(77.4217 s) epoch 1: hr = 0.79, ndcg = 0.47, test_loss = 0.16
+INFO:root:(28.0330 s) epoch 2 : train loss:  0.22
+INFO:root:(65.8196 s) epoch 2: hr = 0.81, ndcg = 0.49, test_loss = 0.15
+INFO:root:(27.7742 s) epoch 3 : train loss:  0.22
+INFO:root:(69.3518 s) epoch 3: hr = 0.82, ndcg = 0.50, test_loss = 0.14
+INFO:root:(28.3505 s) epoch 4 : train loss:  0.21
+INFO:root:(69.8455 s) epoch 4: hr = 0.83, ndcg = 0.51, test_loss = 0.14
+INFO:root:(28.6524 s) epoch 5 : train loss:  0.21
+INFO:root:(66.3179 s) epoch 5: hr = 0.84, ndcg = 0.51, test_loss = 0.14
+INFO:root:(27.7049 s) epoch 6 : train loss:  0.20
+INFO:root:(67.3882 s) epoch 6: hr = 0.84, ndcg = 0.52, test_loss = 0.13
+INFO:root:(27.5089 s) epoch 7 : train loss:  0.20
+INFO:root:(66.3523 s) epoch 7: hr = 0.85, ndcg = 0.52, test_loss = 0.13
+INFO:root:(27.7130 s) epoch 8 : train loss:  0.20
+INFO:root:(65.5525 s) epoch 8: hr = 0.85, ndcg = 0.52, test_loss = 0.13
+INFO:root:(27.2668 s) epoch 9 : train loss:  0.20
+INFO:root:(65.7894 s) epoch 9: hr = 0.85, ndcg = 0.52, test_loss = 0.13
+INFO:root:(27.2799 s) epoch 10 : train loss:  0.20
+INFO:root:(70.5669 s) epoch 10: hr = 0.85, ndcg = 0.53, test_loss = 0.13
+INFO:root:(28.3080 s) epoch 11 : train loss:  0.19
+INFO:root:(65.5441 s) epoch 11: hr = 0.85, ndcg = 0.53, test_loss = 0.13
+INFO:root:(28.0057 s) epoch 12 : train loss:  0.19
+INFO:root:(67.0626 s) epoch 12: hr = 0.86, ndcg = 0.53, test_loss = 0.13
+INFO:root:(26.5172 s) epoch 13 : train loss:  0.19
+INFO:root:(66.2199 s) epoch 13: hr = 0.86, ndcg = 0.53, test_loss = 0.13
+INFO:root:(27.3680 s) epoch 14 : train loss:  0.19
+INFO:root:(73.6433 s) epoch 14: hr = 0.86, ndcg = 0.53, test_loss = 0.13
+INFO:root:(27.7087 s) epoch 15 : train loss:  0.19
+INFO:root:(65.6825 s) epoch 15: hr = 0.86, ndcg = 0.53, test_loss = 0.13
+INFO:root:(31.3856 s) epoch 16 : train loss:  0.19
+INFO:root:(67.3397 s) epoch 16: hr = 0.86, ndcg = 0.53, test_loss = 0.12
+INFO:root:(28.3674 s) epoch 17 : train loss:  0.19
+INFO:root:(71.0234 s) epoch 17: hr = 0.86, ndcg = 0.53, test_loss = 0.12
+INFO:root:(27.9378 s) epoch 18 : train loss:  0.19
+INFO:root:(64.7603 s) epoch 18: hr = 0.86, ndcg = 0.53, test_loss = 0.12
+INFO:root:(26.8105 s) epoch 19 : train loss:  0.19
+INFO:root:(65.5661 s) epoch 19: hr = 0.86, ndcg = 0.53, test_loss = 0.12
+INFO:root:(27.8290 s) epoch 20 : train loss:  0.19
+INFO:root:(65.9591 s) epoch 20: hr = 0.86, ndcg = 0.53, test_loss = 0.12
+INFO:root:(27.2357 s) epoch 21 : train loss:  0.19
+INFO:root:(65.5926 s) epoch 21: hr = 0.86, ndcg = 0.53, test_loss = 0.12
+INFO:root:(26.6606 s) epoch 22 : train loss:  0.19
+INFO:root:(79.4520 s) epoch 22: hr = 0.86, ndcg = 0.53, test_loss = 0.12
+INFO:root:(30.0710 s) epoch 23 : train loss:  0.19
+INFO:root:(64.1370 s) epoch 23: hr = 0.86, ndcg = 0.53, test_loss = 0.12
+INFO:root:(25.6259 s) epoch 24 : train loss:  0.19
