@@ -1,0 +1,6 @@
+model_checkpoint_path: "NAISM1-879"
+all_model_checkpoint_paths: "NAISM1-875"
+all_model_checkpoint_paths: "NAISM1-876"
+all_model_checkpoint_paths: "NAISM1-877"
+all_model_checkpoint_paths: "NAISM1-878"
+all_model_checkpoint_paths: "NAISM1-879"

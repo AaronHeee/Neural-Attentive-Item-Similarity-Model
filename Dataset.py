@@ -116,21 +116,6 @@ class Data:
         self.index = np.arange(self.iterations)
         self.num_batch = self.iterations / self.batch_size
         self.last_batch = False
-        # self.epoch = 0
-
-    # def batch(self, i, IsOptimize):
-    #     i = int(i % self.num_batch)
-    #     # shuffle the dataset every epoch
-    #     self.flag = ( i+1 == self.num_batch ) #judge the train loss batch is over or not
-    #     if IsOptimize:
-    #         if self.flag:
-    #             self.epoch += 1
-    #             self.num_items, self.user_input, self.item_input, self.labels = self._get_train_data()
-    #             self.index_ = self.index
-    #             np.random.shuffle(self.index)
-    #         return self.get_train_batch(self.index, i)
-    #     else:
-    #         return self.get_train_batch(self.index_,i)
 
     def batch_gen(self, i):  #generate training batch
         i = int(i % self.num_batch)
@@ -157,7 +142,6 @@ class Data:
         num_items = self.train.shape[1]
         for (u, i) in self.train.keys():
             # positive instance
-            user_items = []
             user_input.append(u)
             item_input.append(i)
             labels.append(1)
@@ -180,9 +164,9 @@ class Data:
             user_idx = self.user_input[index[idx]]
             item_idx = self.item_input[index[idx]]
             nonzero_row = self.list[user_idx]
-            nonzero_row = self._remove_item(self.num_items, nonzero_row, user_idx)
+            num = self._remove_item(self.num_items, nonzero_row, user_idx)
             user_list.append(nonzero_row)
-            num_list.append(len(nonzero_row))
+            num_list.append(num)
             item_list.append(item_idx)
             labels_list.append(self.labels[index[idx]])
         user_input = np.array(self._add_mask(self.num_items, user_list, num_list))
@@ -192,11 +176,15 @@ class Data:
         return user_input, num_idx, item_input, labels
 
     def _remove_item(self, feature_mask, users, item):
-        for i in range(len(users)):
+        length = len(users)
+        flag = 0
+        for i in range(length):
             if users[i] == item:
-                users[i] = feature_mask
+                flag = 1
+                users[i] = users[-1]
+                users[-1] = feature_mask
                 break
-        return users
+        return length - flag
 
     def _add_mask(self, feature_mask, features, num):
         #uniformalize the length of each batch
