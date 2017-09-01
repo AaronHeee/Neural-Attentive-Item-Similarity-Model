@@ -84,7 +84,7 @@ class NAISM1:
                                                                 name='H_for_MLP', dtype=tf.float32)
 
     def _attention_MLP(self, q_):  #b*n*e
-        with tf.name_scope("attention MLP"):
+        with tf.name_scope("attention_MLP"):
             self.W = tf.expand_dims(self.W, 0)
             b = tf.shape(q_)[0]
             n = tf.shape(q_)[1]
@@ -173,7 +173,7 @@ def training(model, dataset, batch_size, epochs, num_negatives):
 def training_batch(t, epoch, index, model, sess, data):
     # user_input, num_idx, item_input, labels = data.batch(index, IsOptimize=True)
 
-    user_input, num_idx, item_input, labels = data.batch_gen(index)
+    user_input, num_idx, item_input, labels, mask = data.batch_gen(index)
 
     feed_dict = {model.user_input: user_input, model.num_idx: num_idx[:, None], model.item_input: item_input[:, None],
                  model.labels: labels[:, None]}
@@ -187,7 +187,7 @@ def training_loss(epoch_count, model, sess, data):
     index = 0
     train_loss = 0.0
     while index == 0 or data.last_batch == 0:
-        user_input, num_idx, item_input, labels = data.batch_gen(index)
+        user_input, num_idx, item_input, labels, mask = data.batch_gen(index)
         feed_dict = {model.user_input: user_input, model.num_idx: num_idx[:, None], model.item_input: item_input[:, None],model.labels: labels[:, None]}
         train_loss += sess.run(model.loss, feed_dict)
         index += 1

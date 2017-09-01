@@ -160,7 +160,7 @@ def training(model, dataset, batch_size, epochs, num_negatives):
 
 # @profile
 def training_batch(epoch, index, model, sess, data):
-    user_input, num_idx, item_input, labels = data.batch_gen(index)
+    user_input, num_idx, item_input, labels, _ = data.batch_gen(index)
     feed_dict = {model.user_input: user_input, model.num_idx: num_idx[:, None], model.item_input: item_input[:, None], model.labels: labels[:, None]}
     batch_loss, _ = sess.run([model.loss, model.optimizer], feed_dict)
 

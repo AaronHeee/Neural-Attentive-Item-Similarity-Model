@@ -120,7 +120,7 @@ class Data:
     def batch_gen(self, i):  #generate training batch
         i = int(i % self.num_batch)
         self.last_batch  = ( i+1 == self.num_batch )
-        return self.user_input_list[i],self.num_idx_list[i], self.item_input_list[i], self.labels_list[i]
+        return self.user_input_list[i],self.num_idx_list[i], self.item_input_list[i], self.labels_list[i], self.masks_list[i]
 
     def data_shuffle(self):   #negative sampling and shuffle the data
         self.num_items, self.user_input, self.item_input, self.labels = self._get_train_data()
@@ -129,13 +129,14 @@ class Data:
 
     def _preprocess(self):    #generate the masked batch list
         t = time()
-        self.user_input_list,self.num_idx_list, self.item_input_list, self.labels_list = [], [], [], []
+        self.user_input_list,self.num_idx_list, self.item_input_list, self.labels_list, self.masks_list = [], [], [], [], []
         for i in range(self.num_batch):
-            ui, ni, ii, l = self._get_train_batch(self.index, i)
+            ui, ni, ii, l, m = self._get_train_batch(self.index, i)
             self.user_input_list.append(ui)
             self.num_idx_list.append(ni)
             self.item_input_list.append(ii)
             self.labels_list.append(l)
+            self.masks_list.append(m)
 
     def _get_train_data(self):
         user_input, item_input, labels = [],[],[]
@@ -171,9 +172,12 @@ class Data:
             labels_list.append(self.labels[index[idx]])
         user_input = np.array(self._add_mask(self.num_items, user_list, num_list))
         num_idx = np.array(num_list)
+        masks = np.ones(np.shape(user_input))
+        for i in range(len(num_idx)):
+            masks[i][num_idx[i]:] = 0.0
         item_input = np.array(item_list)
         labels = np.array(labels_list)
-        return user_input, num_idx, item_input, labels
+        return user_input, num_idx, item_input, labels, masks
 
     def _remove_item(self, feature_mask, users, item):
         length = len(users)
