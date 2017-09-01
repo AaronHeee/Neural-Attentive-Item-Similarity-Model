@@ -114,8 +114,6 @@ def training(model, dataset, batch_size, epochs, num_negatives):
             #print "restored"
         #else:
         sess.run(tf.initialize_all_variables())
-        logging.info("initialized")
-        print "initialized"
         #writer = tf.summary.FileWriter('./graphs', sess.graph)
         #writer.close()
 
@@ -126,19 +124,36 @@ def training(model, dataset, batch_size, epochs, num_negatives):
         index = 0
         total_loss = 0.0
         epoch_count = 0
+        
+        batch_begin = time()
+        data.data_shuffle()
+        batch_time = time() - batch_begin
+        
+        train_begin = time()
 
         while epoch_count < epochs:
 
             if data.last_batch:
-                training_loss(epoch_count, model, sess, data)
-                data.data_shuffle()
-                epoch_count += 1
-                t = time()
+                train_time = time() - train_begin
+                
+                loss_begin = time()
+                train_loss = training_loss(epoch_count, model, sess, data)
+                loss_time = time() - loss_begin
+                
+                eval_begin = time()
                 (hits, ndcgs, losses) = evaluate.eval()
                 hr, ndcg, test_loss = np.array(hits).mean(), np.array(ndcgs).mean(), np.array(losses).mean()
-                logging.info("(%.4f s) epoch %d: hr = %.4f, ndcg = %.4f, test_loss = %.4f" % (time() - t, epoch_count-1, hr, ndcg, test_loss))
-                print "(%.4f s) epoch %d: hr = %.4f, ndcg = %.4f, test_loss = %.4f" % (time() - t, epoch_count-1, hr, ndcg, test_loss)
-
+                eval_time = time() - eval_begin
+                
+                logging.info("Epoch %d [%.1fs + %.1fs]: HR = %.4f, NDCG = %.4f, loss = %.4f [%.1fs] train_loss = %.4f [%.1fs]" % (epoch_count, batch_time, train_time, hr, ndcg, test_loss, eval_time, train_loss, loss_time))
+                print "Epoch %d [%.1fs + %.1fs]: HR = %.4f, NDCG = %.4f, loss = %.4f [%.1fs] train_loss = %.4f [%.1fs]" % (epoch_count, batch_time, train_time, hr, ndcg, test_loss, eval_time, train_loss, loss_time)
+                batch_begin = time()
+                data.data_shuffle()
+                epoch_count += 1
+                batch_time = time() - batch_begin
+ 
+                train_begin = time()
+ 
             #saver.save(sess, ckpt_path, global_step = index)
             training_batch(epoch_count, index, model, sess, data)
             
@@ -154,7 +169,6 @@ def training_batch(epoch, index, model, sess, data):
 
 
 def training_loss(epoch_count, model, sess, data):
-    t = time()
     index = 0
     train_loss = 0.0
     while index == 0 or data.last_batch == 0:
@@ -162,8 +176,7 @@ def training_loss(epoch_count, model, sess, data):
         feed_dict = {model.user_input: user_input, model.num_idx: num_idx[:, None], model.item_input: item_input[:, None],model.labels: labels[:, None]}
         train_loss += sess.run(model.loss, feed_dict)
         index += 1
-    logging.info('(%.4f s) epoch %d : train_loss: %5.4f' % (time() - t, epoch_count, train_loss / index))
-    print '(%.4f s) epoch %d : train_loss: %5.4f' % (time() - t, epoch_count, train_loss / index)
+    return train_loss / index
 
 if __name__=='__main__':
 

@@ -117,7 +117,6 @@ class Data:
         self.num_batch = self.iterations / self.batch_size
         self.last_batch = False
         # self.epoch = 0
-        self._preprocess()
 
     # def batch(self, i, IsOptimize):
     #     i = int(i % self.num_batch)
@@ -152,7 +151,6 @@ class Data:
             self.num_idx_list.append(ni)
             self.item_input_list.append(ii)
             self.labels_list.append(l)
-        print "(%.4f s) already preprocess batch ..." % (time() - t)
 
     def _get_train_data(self):
         user_input, item_input, labels = [],[],[]
