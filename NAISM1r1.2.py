@@ -89,19 +89,19 @@ class NAISM1:
             MLP_output = tf.matmul(q_, self.W) + self.b #(b*n*e) * (b*e*w) + (1*1*w) = b*n*w
             self.h = tf.tile(tf.expand_dims(self.h, 0), tf.stack([b,1,1])) #b*w*1
 
-            self.A_ = tf.squeeze(tf.matmul(MLP_output, self.h)) #b*n
+            A_ = tf.reduce_sum(tf.matmul(MLP_output, self.h),2) #b*n
 
             # softmax for not mask features
-            self.exp_A_ = tf.exp(self.A_)
+            exp_A_ = tf.exp(A_)
             num_idx = tf.reduce_sum(self.num_idx, 1)
             mask_mat = tf.sequence_mask(num_idx, maxlen = n, dtype = tf.float32) #b*n
-            self.exp_A_ = mask_mat * self.exp_A_
-            sum = tf.reduce_sum(self.exp_A_, 1)  #b
-            frac = tf.expand_dims(tf.pow(sum, -1), 1) #b*1
+            exp_A_ = mask_mat * exp_A_
+            sum = tf.reduce_sum(exp_A_, 1)  #b
+            frac = tf.expand_dims(tf.pow(sum, -1), 1, name="frac") #b*1
 
-            self.A = tf.expand_dims( frac * self.exp_A_, 2) #b*n*1
+            A = tf.expand_dims(frac * exp_A_, 2, name="attention") #b*n*1
 
-            return tf.reduce_sum(self.A * q_, 1)
+            return tf.reduce_sum(A * q_, 1)
 
     def _create_inference(self):
         with tf.name_scope("inference"):
@@ -148,8 +148,8 @@ def training(model, dataset, batch_size, epochs, num_negatives):
             logging.info("initialized")
             print "initialized"
 
-        # writer = tf.summary.FileWriter('./graphs', sess.graph)
-        # writer.close()
+        writer = tf.summary.FileWriter('./graphs', sess.graph)
+        writer.close()
 
         data = Data(dataset.trainMatrix, dataset.trainList, batch_size, num_negatives)
         evaluate = Evaluate(model, sess, dataset.trainList, dataset.testRatings, dataset.testNegatives)
