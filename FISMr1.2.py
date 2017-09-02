@@ -17,7 +17,6 @@ from Evaluate import Evaluate
 
 import argparse
 
-SKIP_STEP = 200
 
 def parse_args():
     parser = argparse.ArgumentParser(description="Run FISM.")
@@ -43,9 +42,10 @@ def parse_args():
 
 class FISM:
 
-    def __init__(self, num_items, batch_size, learning_rate, embedding_size, alpha, regs):
+    def __init__(self, num_items, dataset_name, batch_size, learning_rate, embedding_size, alpha, regs):
         self.num_items = num_items
         self.batch_size = batch_size
+        self.dataset_name =dataset_name
         self.learning_rate = learning_rate
         self.embedding_size = embedding_size
         self.alpha = alpha
@@ -100,51 +100,79 @@ class FISM:
 def training(model, dataset, batch_size, epochs, num_negatives):
     logging.info("begin training the FISM model...")
     saver = tf.train.Saver()
-    #mkdir('checkpoints') #undifined
-    with tf.Session() as sess:
-        sess.run(tf.global_variables_initializer())
 
-        writer = tf.summary.FileWriter('./graphs', sess.graph)
-        writer.close()
+    ckpt_path = 'Checkpoints/FISM/lr%.4f_bs%d_%s' % (model.learning_rate, model.batch_size, model.dataset_name)
+
+    with tf.Session() as sess:
+
+        ckpt = tf.train.get_checkpoint_state(ckpt_path)
+        if ckpt and ckpt.model_checkpoint_path:
+            saver.restore(sess, ckpt.model_checkpoint_path)
+            logging.info("restored")
+            print "restored"
+        else:
+            sess.run(tf.global_variables_initializer())
+            logging.info("initialized")
+            print "initialized"
+
+        # writer = tf.summary.FileWriter('./graphs', sess.graph)
+        # writer.close()
 
         data = Data(dataset.trainMatrix, dataset.trainList, batch_size, num_negatives)
         # model, sess, trainList, testRatings, testNegatives,
         evaluate = Evaluate(model, sess, dataset.trainList, dataset.testRatings, dataset.testNegatives)
 
-        t = time()
         index = 0
         total_loss = 0.0
         epoch_count = 0
 
+        batch_begin = time()
+        data.data_shuffle()
+        batch_time = time() - batch_begin
+
+        train_begin = time()
+
         while epoch_count < epochs:
 
             if data.last_batch:
-                training_loss(epoch_count, model, sess, data)
-                data.data_shuffle()
-                epoch_count += 1
+                train_time = time() - train_begin
+
+                loss_begin = time()
+                train_loss = training_loss(model, sess, data)
+                loss_time = time() - loss_begin
+
+                eval_begin = time()
                 (hits, ndcgs, losses) = evaluate.eval()
                 hr, ndcg, test_loss = np.array(hits).mean(), np.array(ndcgs).mean(), np.array(losses).mean()
-                logging.info("epoch %d: hr = %.2f, ndcg = %.2f, test_loss = %.2f" % (epoch_count, hr, ndcg, test_loss))
+                eval_time = time() - eval_begin
 
-            saver.save(sess, 'checkpoints/FISM', index)
+                logging.info(
+                    "Epoch %d [%.1fs + %.1fs]: HR = %.4f, NDCG = %.4f, loss = %.4f [%.1fs] train_loss = %.4f [%.1fs]" % (
+                    epoch_count, batch_time, train_time, hr, ndcg, test_loss, eval_time, train_loss, loss_time))
+                print "Epoch %d [%.1fs + %.1fs]: HR = %.4f, NDCG = %.4f, loss = %.4f [%.1fs] train_loss = %.4f [%.1fs]" % (
+                    epoch_count, batch_time, train_time, hr, ndcg, test_loss, eval_time, train_loss, loss_time)
+
+                batch_begin = time()
+                data.data_shuffle()
+                epoch_count += 1
+                batch_time = time() - batch_begin
+
+                train_begin = time()
+
+                saver.save(sess, ckpt_path, global_step = index)
+            training_batch(index, model, sess, data)
+
             index += 1
 
 
 # @profile
-def training_batch(t, epoch, index, model, sess, data):
-    # user_input, num_idx, item_input, labels = data.batch(index, IsOptimize=True)
-
+def training_batch(index, model, sess, data):
     user_input, num_idx, item_input, labels = data.batch_gen(index)
-
     feed_dict = {model.user_input: user_input, model.num_idx: num_idx[:, None], model.item_input: item_input[:, None],
                  model.labels: labels[:, None]}
-    batch_loss, _ = sess.run([model.loss, model.optimizer], feed_dict)
-    if index%100 == 0:
-        logging.info('(%.4f s) %d epoch: Batch loss at step %2d: %5.2f' % (
-            time() - t, epoch, index, batch_loss))
+    sess.run([model.loss, model.optimizer], feed_dict)
 
-def training_loss(epoch_count, model, sess, data):
-    t = time()
+def training_loss(model, sess, data):
     index = 0
     train_loss = 0.0
     while index == 0 or data.last_batch == 0:
@@ -152,7 +180,7 @@ def training_loss(epoch_count, model, sess, data):
         feed_dict = {model.user_input: user_input, model.num_idx: num_idx[:, None], model.item_input: item_input[:, None],model.labels: labels[:, None]}
         train_loss += sess.run(model.loss, feed_dict)
         index += 1
-    logging.info('(%.4f s) epoch %d : train loss: %5.2f' % (time() - t, epoch_count, train_loss / index))
+    return train_loss / index
 
 #(self, num_items, batch_size, learning_rate, embedding_size, lambda_bilinear, gamma_bilinear)
 if __name__=='__main__':
@@ -160,7 +188,8 @@ if __name__=='__main__':
     args = parse_args()
     regs = eval(args.regs)
     logging.basicConfig(filename="log_lr%.4f_bs%d" %(args.lr, args.batch_size), level = logging.INFO)
+    logging.info('----------------------------------------------------------')
     dataset = Dataset(args.path + args.dataset)
-    model = FISM(dataset.num_items, args.batch_size, args.lr, args.embed_size, args.alpha, regs)
+    model = FISM(dataset.num_items,args.dataset,args.batch_size, args.lr, args.embed_size, args.alpha, regs)
     model.build_graph()
     training(model, dataset, args.batch_size, args.epochs, args.num_neg)

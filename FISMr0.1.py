@@ -18,7 +18,6 @@ from Evaluate import Evaluate
 
 import argparse
 
-SKIP_STEP = 200
 
 def parse_args():
     parser = argparse.ArgumentParser(description="Run FISM.")
@@ -137,7 +136,7 @@ def training(model, dataset, batch_size, epochs, num_negatives):
                 train_time = time() - train_begin
                 
                 loss_begin = time()
-                train_loss = training_loss(epoch_count, model, sess, data)
+                train_loss = training_loss(model, sess, data)
                 loss_time = time() - loss_begin
                 
                 eval_begin = time()
@@ -155,20 +154,20 @@ def training(model, dataset, batch_size, epochs, num_negatives):
                 train_begin = time()
  
             #saver.save(sess, ckpt_path, global_step = index)
-            training_batch(epoch_count, index, model, sess, data)
+            training_batch(index, model, sess, data)
             
             index += 1
             #if epoch_count == 1:
             #    break
 
 # @profile
-def training_batch(epoch, index, model, sess, data):
+def training_batch(index, model, sess, data):
     user_input, num_idx, item_input, labels = data.batch_gen(index)
     feed_dict = {model.user_input: user_input, model.num_idx: num_idx[:, None], model.item_input: item_input[:, None], model.labels: labels[:, None]}
     batch_loss, _ = sess.run([model.loss, model.optimizer], feed_dict)
 
 
-def training_loss(epoch_count, model, sess, data):
+def training_loss(model, sess, data):
     index = 0
     train_loss = 0.0
     while index == 0 or data.last_batch == 0:
