@@ -17,7 +17,7 @@ from Evaluate import Evaluate
 import argparse
 
 def parse_args():
-    parser = argparse.ArgumentParser(description="Run NAISM1.")
+    parser = argparse.ArgumentParser(description="Run NAISM2.")
     parser.add_argument('--path', nargs='?', default='Data/',
                         help='Input data path.')
     parser.add_argument('--dataset', nargs='?', default='pinterest-20',
@@ -26,7 +26,7 @@ def parse_args():
                         help='Number of epochs.')
     parser.add_argument('--batch_size', type=int, default=256,
                         help='Batch size.')
-    parser.add_argument('--embed_size', type=int, default=8,
+    parser.add_argument('--embed_size', type=int, default=16,
                         help='Embedding size.')
     parser.add_argument('--regs', nargs='?', default='[1e-7,1e-7,1e-7]',
                         help='Regularization for user and item embeddings.')
@@ -38,7 +38,7 @@ def parse_args():
                         help='Learning rate.')
     return parser.parse_args()
 
-class NAISM1:
+class NAISM2:
 
     def __init__(self, num_items, dataset_name, batch_size, learning_rate, embedding_size, alpha, regs):
         self.num_items = num_items
@@ -55,10 +55,10 @@ class NAISM1:
 
     def _create_placeholders(self):
         with tf.name_scope("input_data"):
-            self.user_input = tf.placeholder(tf.int32, shape=[self.batch_size, None])	#the index of users
-            self.num_idx = tf.placeholder(tf.float32, shape=[self.batch_size, 1])	#the number of items rated by users
-            self.item_input = tf.placeholder(tf.int32, shape=[self.batch_size, 1])	  #the index of items
-            self.labels = tf.placeholder(tf.float32, shape=[self.batch_size,1])	#the ground truth
+            self.user_input = tf.placeholder(tf.int32, shape=[None, None])	#the index of users
+            self.num_idx = tf.placeholder(tf.float32, shape=[None, 1])	#the number of items rated by users
+            self.item_input = tf.placeholder(tf.int32, shape=[None, 1])	  #the index of items
+            self.labels = tf.placeholder(tf.float32, shape=[None,1])	#the ground truth
 
     def _create_variables(self):
         with tf.name_scope("embedding"):  # The embedding initialization is unknown now
@@ -100,7 +100,7 @@ class NAISM1:
             frac = tf.expand_dims(tf.pow(sum, -1), 1, name="frac") #b*1
 
             A = tf.expand_dims(frac * exp_A_, 2, name="attention") #b*n*1
-
+            self.A_output = tf.reduce_sum(tf.square(A))
             return tf.reduce_sum(A * self.embedding_q_, 1)
 
     def _create_inference(self):
@@ -137,9 +137,9 @@ class NAISM1:
         logging.info("already build the computing graph...")
 
 def training(model, dataset, batch_size, epochs, num_negatives):
-    logging.info("begin training the NAISM1 model...")
+    logging.info("begin training the NAISM2 model...")
     saver = tf.train.Saver()
-    ckpt_path = 'Checkpoints/NAISM1/lr%.4f_bs%d_%s' % (model.learning_rate, model.batch_size, model.dataset_name)
+    ckpt_path = 'Checkpoints/NAISM2/lr%.4f_bs%d_%s' % (model.learning_rate, model.batch_size, model.dataset_name)
 
     with tf.Session() as sess:
 
@@ -205,7 +205,8 @@ def training_batch(index, model, sess, data):
 
     feed_dict = {model.user_input: user_input, model.num_idx: num_idx[:, None], model.item_input: item_input[:, None],
                  model.labels: labels[:, None]}
-    batch_loss, _ = sess.run([model.loss, model.optimizer], feed_dict)
+    batch_loss, _, A = sess.run([model.loss, model.optimizer, model.A_output], feed_dict)
+    print A
 
 
 def training_loss(model, sess, data):
@@ -223,8 +224,8 @@ if __name__=='__main__':
 
     args = parse_args()
     regs = eval(args.regs)
-    logging.basicConfig(filename="Log/NAISM1/log_lr%.4f_bs%d" %(args.lr, args.batch_size), level = logging.INFO)
+    logging.basicConfig(filename="Log/NAISM2/log_lr%.4f_bs%d_%s_%.2f" %(args.lr, args.batch_size, args.dataset, args.alpha), level = logging.INFO)
     dataset = Dataset(args.path + args.dataset)
-    model = NAISM1(dataset.num_items,args.dataset, args.batch_size, args.lr, args.embed_size, args.alpha, regs)
+    model = NAISM2(dataset.num_items,args.dataset, args.batch_size, args.lr, args.embed_size, args.alpha, regs)
     model.build_graph()
     training(model, dataset, args.batch_size, args.epochs, args.num_neg)

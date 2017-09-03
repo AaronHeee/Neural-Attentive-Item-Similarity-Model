@@ -1,0 +1,13 @@
+INFO:root:----------------------------------------------------------
+INFO:root:already build the computing graph...
+INFO:root:begin training the FISM model...
+INFO:root:initialized
+INFO:root:----------------------------------------------------------
+INFO:root:already build the computing graph...
+INFO:root:begin training the FISM model...
+INFO:root:initialized
+INFO:root:Epoch 0 [1426.8s + 4384.9s]: HR = 0.5899, NDCG = 0.3382, loss = 0.2331 [209.5s] train_loss = 0.2978 [5217.6s]
+INFO:root:Epoch 1 [1818.6s + 5041.4s]: HR = 0.6121, NDCG = 0.3531, loss = 0.2197 [299.2s] train_loss = 0.2865 [9230.6s]
+INFO:root:Epoch 0 [1811.5s + 8271.8s]: HR = 0.5834, NDCG = 0.3356, loss = 0.2366 [341.1s] train_loss = 0.2997 [18363.7s]
+INFO:root:Epoch 2 [1819.1s + 5746.5s]: HR = 0.6262, NDCG = 0.3634, loss = 0.2110 [365.2s] train_loss = 0.2796 [6017.9s]
+INFO:root:Epoch 3 [1946.1s + 5635.0s]: HR = 0.6341, NDCG = 0.3695, loss = 0.2053 [514.5s] train_loss = 0.2745 [5344.0s]

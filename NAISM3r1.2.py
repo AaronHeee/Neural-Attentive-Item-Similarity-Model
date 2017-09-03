@@ -17,7 +17,7 @@ from Evaluate import Evaluate
 import argparse
 
 def parse_args():
-    parser = argparse.ArgumentParser(description="Run NAISM1.")
+    parser = argparse.ArgumentParser(description="Run NAISM3.")
     parser.add_argument('--path', nargs='?', default='Data/',
                         help='Input data path.')
     parser.add_argument('--dataset', nargs='?', default='pinterest-20',
@@ -26,7 +26,7 @@ def parse_args():
                         help='Number of epochs.')
     parser.add_argument('--batch_size', type=int, default=256,
                         help='Batch size.')
-    parser.add_argument('--embed_size', type=int, default=8,
+    parser.add_argument('--embed_size', type=int, default=16,
                         help='Embedding size.')
     parser.add_argument('--regs', nargs='?', default='[1e-7,1e-7,1e-7]',
                         help='Regularization for user and item embeddings.')
@@ -38,7 +38,7 @@ def parse_args():
                         help='Learning rate.')
     return parser.parse_args()
 
-class NAISM1:
+class NAISM3:
 
     def __init__(self, num_items, dataset_name, batch_size, learning_rate, embedding_size, alpha, regs):
         self.num_items = num_items
@@ -137,9 +137,9 @@ class NAISM1:
         logging.info("already build the computing graph...")
 
 def training(model, dataset, batch_size, epochs, num_negatives):
-    logging.info("begin training the NAISM1 model...")
+    logging.info("begin training the NAISM3 model...")
     saver = tf.train.Saver()
-    ckpt_path = 'Checkpoints/NAISM1/lr%.4f_bs%d_%s' % (model.learning_rate, model.batch_size, model.dataset_name)
+    ckpt_path = 'Checkpoints/NAISM3/lr%.4f_bs%d_%s' % (model.learning_rate, model.batch_size, model.dataset_name)
 
     with tf.Session() as sess:
 
@@ -223,8 +223,8 @@ if __name__=='__main__':
 
     args = parse_args()
     regs = eval(args.regs)
-    logging.basicConfig(filename="Log/NAISM1/log_lr%.4f_bs%d" %(args.lr, args.batch_size), level = logging.INFO)
+    logging.basicConfig(filename="Log/NAISM3/log_lr%.4f_bs%d_%s_.2f" %(args.lr, args.batch_size, args.dataset, args.alpha), level = logging.INFO)
     dataset = Dataset(args.path + args.dataset)
-    model = NAISM1(dataset.num_items,args.dataset, args.batch_size, args.lr, args.embed_size, args.alpha, regs)
+    model = NAISM3(dataset.num_items,args.dataset, args.batch_size, args.lr, args.embed_size, args.alpha, regs)
     model.build_graph()
     training(model, dataset, args.batch_size, args.epochs, args.num_neg)

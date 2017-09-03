@@ -5,6 +5,7 @@ import os
 
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
+import cProfile
 import tensorflow as tf
 import numpy as np
 import logging
@@ -21,13 +22,13 @@ def parse_args():
     parser = argparse.ArgumentParser(description="Run FISM.")
     parser.add_argument('--path', nargs='?', default='Data/',
                         help='Input data path.')
-    parser.add_argument('--dataset', nargs='?', default='pinterest-20',
+    parser.add_argument('--dataset', nargs='?', default='ml-1m',
                         help='Choose a dataset.')
     parser.add_argument('--epochs', type=int, default=100,
                         help='Number of epochs.')
-    parser.add_argument('--batch_size', type=int, default=256,
+    parser.add_argument('--batch_size', type=int, default=2048,
                         help='Batch size.')
-    parser.add_argument('--embed_size', type=int, default=8,
+    parser.add_argument('--embed_size', type=int, default=16,
                         help='Embedding size.')
     parser.add_argument('--regs', nargs='?', default='[1e-7,1e-7]',
                         help='Regularization for user and item embeddings.')
@@ -104,7 +105,7 @@ def training(model, dataset, batch_size, epochs, num_negatives):
 
     with tf.Session() as sess:
 
-        ckpt = tf.train.get_checkpoint_state(ckpt_path)
+        ckpt = tf.train.get_checkpoint_state('Checkpoints/FISM/checkpoint')
         if ckpt and ckpt.model_checkpoint_path:
             saver.restore(sess, ckpt.model_checkpoint_path)
             logging.info("restored")
@@ -186,7 +187,7 @@ if __name__=='__main__':
 
     args = parse_args()
     regs = eval(args.regs)
-    logging.basicConfig(filename="Log/FISM/log_lr%.4f_bs%d" %(args.lr, args.batch_size), level = logging.INFO)
+    logging.basicConfig(filename="Log/FISM/log_lr%.4f_bs%d_%s_%.1f" %(args.lr, args.batch_size, args.dataset, args.alpha), level = logging.INFO)
     logging.info('----------------------------------------------------------')
     dataset = Dataset(args.path + args.dataset)
     model = FISM(dataset.num_items,args.dataset,args.batch_size, args.lr, args.embed_size, args.alpha, regs)
