@@ -9,3 +9,5 @@ INFO:root:Epoch 3 [3690.3s + 3839.8s]: HR = 0.6386, NDCG = 0.3735, loss = 0.2028
 INFO:root:Epoch 4 [2344.0s + 2994.6s]: HR = 0.6447, NDCG = 0.3781, loss = 0.1998 [55.2s] train_loss = 0.2687 [1550.8s]
 INFO:root:Epoch 5 [3045.8s + 3905.3s]: HR = 0.6467, NDCG = 0.3797, loss = 0.1962 [76.2s] train_loss = 0.2664 [2758.5s]
 INFO:root:Epoch 6 [3653.8s + 3831.2s]: HR = 0.6490, NDCG = 0.3828, loss = 0.1950 [64.0s] train_loss = 0.2647 [1411.3s]
+INFO:root:Epoch 7 [2935.3s + 2784.7s]: HR = 0.6522, NDCG = 0.3851, loss = 0.1937 [73.2s] train_loss = 0.2630 [2104.0s]
+INFO:root:Epoch 8 [2403.4s + 3643.6s]: HR = 0.6573, NDCG = 0.3889, loss = 0.1923 [70.0s] train_loss = 0.2620 [2883.8s]

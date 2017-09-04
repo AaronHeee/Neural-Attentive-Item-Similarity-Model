@@ -1,0 +1,18 @@
+INFO:root:already build the computing graph...
+INFO:root:begin training the NAIS_concat model...
+INFO:tensorflow:Restoring parameters from Pretrain/pinterest-20/weights-7704
+INFO:root:using pretrained variables
+INFO:root:Epoch 0 [128.9s + 285.1s]: HR = 0.7651, NDCG = 0.4461, loss = 0.5808 [133.4s] train_loss = 0.6086 [141.6s]
+INFO:root:Epoch 1 [128.0s + 286.4s]: HR = 0.7704, NDCG = 0.4508, loss = 0.5730 [152.4s] train_loss = 0.6052 [140.3s]
+INFO:root:Epoch 2 [130.2s + 349.1s]: HR = 0.7709, NDCG = 0.4513, loss = 0.5678 [158.1s] train_loss = 0.6025 [167.2s]
+INFO:root:Epoch 3 [124.1s + 340.0s]: HR = 0.7700, NDCG = 0.4510, loss = 0.5647 [156.6s] train_loss = 0.6006 [166.1s]
+INFO:root:Epoch 4 [140.3s + 331.5s]: HR = 0.7698, NDCG = 0.4511, loss = 0.5626 [156.8s] train_loss = 0.5992 [163.0s]
+INFO:root:Epoch 5 [111.3s + 345.0s]: HR = 0.7689, NDCG = 0.4505, loss = 0.5610 [151.6s] train_loss = 0.5981 [156.0s]
+INFO:root:Epoch 6 [102.8s + 307.6s]: HR = 0.7685, NDCG = 0.4501, loss = 0.5599 [130.1s] train_loss = 0.5972 [150.1s]
+INFO:root:Epoch 7 [96.7s + 293.5s]: HR = 0.7685, NDCG = 0.4501, loss = 0.5590 [133.6s] train_loss = 0.5965 [139.5s]
+INFO:root:Epoch 8 [112.3s + 291.1s]: HR = 0.7682, NDCG = 0.4500, loss = 0.5583 [132.3s] train_loss = 0.5958 [145.0s]
+INFO:root:Epoch 9 [97.3s + 291.1s]: HR = 0.7677, NDCG = 0.4496, loss = 0.5577 [134.1s] train_loss = 0.5953 [134.1s]
+INFO:root:Epoch 10 [100.1s + 313.1s]: HR = 0.7674, NDCG = 0.4496, loss = 0.5571 [115.8s] train_loss = 0.5948 [155.8s]
+INFO:root:Epoch 11 [96.2s + 256.5s]: HR = 0.7672, NDCG = 0.4494, loss = 0.5567 [121.5s] train_loss = 0.5944 [129.0s]
+INFO:root:Epoch 12 [96.6s + 253.5s]: HR = 0.7674, NDCG = 0.4494, loss = 0.5563 [120.5s] train_loss = 0.5941 [128.8s]
+INFO:root:Epoch 13 [94.8s + 254.3s]: HR = 0.7668, NDCG = 0.4491, loss = 0.5559 [119.6s] train_loss = 0.5937 [126.7s]

@@ -1,0 +1,49 @@
+INFO:root:already build the computing graph...
+INFO:root:begin training the NAIS_concat model...
+INFO:root:initialized
+INFO:root:Epoch 0 [69.0s + 748.2s]: HR = 0.3181, NDCG = 0.1754, loss = 0.2454 [115.2s] train_loss = 0.4146 [234.5s]
+INFO:root:Epoch 1 [75.3s + 754.7s]: HR = 0.4321, NDCG = 0.2447, loss = 0.2301 [115.5s] train_loss = 0.3840 [234.9s]
+INFO:root:Epoch 2 [68.4s + 758.3s]: HR = 0.5102, NDCG = 0.2904, loss = 0.2185 [113.0s] train_loss = 0.3584 [219.3s]
+INFO:root:Epoch 3 [70.3s + 760.9s]: HR = 0.5582, NDCG = 0.3162, loss = 0.2097 [112.0s] train_loss = 0.3402 [227.6s]
+INFO:root:already build the computing graph...
+INFO:root:begin training the NAIS_concat model...
+INFO:root:initialized
+INFO:root:Epoch 4 [65.7s + 759.7s]: HR = 0.5893, NDCG = 0.3346, loss = 0.2026 [113.8s] train_loss = 0.3272 [218.7s]
+INFO:root:Epoch 0 [75.5s + 829.2s]: HR = 0.0932, NDCG = 0.0419, loss = nan [116.3s] train_loss = nan [224.4s]
+INFO:root:Epoch 5 [67.4s + 747.9s]: HR = 0.6104, NDCG = 0.3479, loss = 0.1969 [113.1s] train_loss = 0.3170 [230.5s]
+INFO:root:already build the computing graph...
+INFO:root:begin training the NAIS_concat model...
+INFO:root:initialized
+INFO:root:Epoch 6 [68.7s + 748.7s]: HR = 0.6288, NDCG = 0.3598, loss = 0.1920 [117.3s] train_loss = 0.3086 [222.8s]
+INFO:root:Epoch 7 [67.6s + 746.8s]: HR = 0.6446, NDCG = 0.3706, loss = 0.1883 [115.6s] train_loss = 0.3012 [223.1s]
+INFO:root:Epoch 8 [66.0s + 749.6s]: HR = 0.6593, NDCG = 0.3811, loss = 0.1846 [112.6s] train_loss = 0.2952 [216.2s]
+INFO:root:Epoch 9 [65.4s + 746.0s]: HR = 0.6729, NDCG = 0.3909, loss = 0.1816 [112.7s] train_loss = 0.2898 [221.0s]
+INFO:root:Epoch 10 [65.9s + 746.8s]: HR = 0.6853, NDCG = 0.3997, loss = 0.1788 [115.2s] train_loss = 0.2849 [223.7s]
+INFO:root:Epoch 11 [66.7s + 741.7s]: HR = 0.6957, NDCG = 0.4076, loss = 0.1764 [113.3s] train_loss = 0.2805 [224.6s]
+INFO:root:Epoch 12 [66.4s + 745.4s]: HR = 0.7055, NDCG = 0.4142, loss = 0.1741 [115.3s] train_loss = 0.2766 [233.5s]
+INFO:root:Epoch 13 [66.6s + 747.5s]: HR = 0.7139, NDCG = 0.4205, loss = 0.1721 [113.7s] train_loss = 0.2731 [224.3s]
+INFO:root:Epoch 14 [69.4s + 746.9s]: HR = 0.7219, NDCG = 0.4257, loss = 0.1703 [113.5s] train_loss = 0.2701 [230.2s]
+INFO:root:Epoch 15 [65.6s + 741.4s]: HR = 0.7277, NDCG = 0.4306, loss = 0.1686 [115.5s] train_loss = 0.2671 [229.5s]
+INFO:root:Epoch 16 [71.9s + 788.6s]: HR = 0.7333, NDCG = 0.4346, loss = 0.1672 [114.4s] train_loss = 0.2645 [234.3s]
+INFO:root:Epoch 17 [67.1s + 760.0s]: HR = 0.7384, NDCG = 0.4380, loss = 0.1658 [113.8s] train_loss = 0.2620 [227.6s]
+INFO:root:Epoch 18 [66.0s + 762.1s]: HR = 0.7429, NDCG = 0.4408, loss = 0.1646 [118.4s] train_loss = 0.2598 [255.1s]
+INFO:root:Epoch 19 [66.0s + 774.9s]: HR = 0.7477, NDCG = 0.4435, loss = 0.1634 [113.7s] train_loss = 0.2579 [267.6s]
+INFO:root:Epoch 20 [65.3s + 768.0s]: HR = 0.7515, NDCG = 0.4462, loss = 0.1622 [113.2s] train_loss = 0.2562 [250.5s]
+INFO:root:Epoch 21 [68.3s + 754.0s]: HR = 0.7547, NDCG = 0.4481, loss = 0.1613 [113.7s] train_loss = 0.2547 [244.8s]
+INFO:root:Epoch 22 [67.3s + 747.8s]: HR = 0.7580, NDCG = 0.4502, loss = 0.1604 [115.2s] train_loss = 0.2530 [221.8s]
+INFO:root:Epoch 23 [66.5s + 749.8s]: HR = 0.7609, NDCG = 0.4518, loss = 0.1595 [116.9s] train_loss = 0.2517 [219.1s]
+INFO:root:Epoch 24 [67.1s + 746.9s]: HR = 0.7630, NDCG = 0.4540, loss = 0.1587 [116.1s] train_loss = 0.2504 [222.7s]
+INFO:root:Epoch 25 [65.9s + 752.2s]: HR = 0.7655, NDCG = 0.4554, loss = 0.1579 [116.4s] train_loss = 0.2493 [224.0s]
+INFO:root:Epoch 26 [65.1s + 741.1s]: HR = 0.7680, NDCG = 0.4569, loss = 0.1572 [111.6s] train_loss = 0.2479 [220.5s]
+INFO:root:Epoch 27 [65.7s + 765.0s]: HR = 0.7701, NDCG = 0.4585, loss = 0.1565 [110.8s] train_loss = 0.2471 [217.5s]
+INFO:root:Epoch 28 [65.3s + 745.5s]: HR = 0.7722, NDCG = 0.4600, loss = 0.1559 [114.3s] train_loss = 0.2461 [222.8s]
+INFO:root:Epoch 29 [69.1s + 754.6s]: HR = 0.7743, NDCG = 0.4611, loss = 0.1553 [115.2s] train_loss = 0.2451 [227.5s]
+INFO:root:Epoch 30 [67.4s + 750.3s]: HR = 0.7755, NDCG = 0.4622, loss = 0.1548 [113.3s] train_loss = 0.2440 [217.0s]
+INFO:root:Epoch 31 [65.4s + 751.7s]: HR = 0.7768, NDCG = 0.4633, loss = 0.1543 [112.6s] train_loss = 0.2433 [233.0s]
+INFO:root:Epoch 32 [67.1s + 748.3s]: HR = 0.7778, NDCG = 0.4643, loss = 0.1538 [112.6s] train_loss = 0.2425 [235.7s]
+INFO:root:Epoch 33 [67.5s + 748.3s]: HR = 0.7786, NDCG = 0.4650, loss = 0.1534 [112.5s] train_loss = 0.2417 [241.5s]
+INFO:root:Epoch 34 [66.0s + 748.4s]: HR = 0.7803, NDCG = 0.4661, loss = 0.1529 [116.5s] train_loss = 0.2412 [224.7s]
+INFO:root:Epoch 35 [65.7s + 766.0s]: HR = 0.7815, NDCG = 0.4667, loss = 0.1525 [114.8s] train_loss = 0.2404 [224.2s]
+INFO:root:Epoch 36 [65.4s + 747.4s]: HR = 0.7829, NDCG = 0.4679, loss = 0.1522 [113.9s] train_loss = 0.2398 [223.2s]
+INFO:root:Epoch 37 [67.5s + 759.5s]: HR = 0.7833, NDCG = 0.4689, loss = 0.1518 [113.7s] train_loss = 0.2392 [232.5s]
+INFO:root:Epoch 38 [65.3s + 748.3s]: HR = 0.7849, NDCG = 0.4698, loss = 0.1515 [114.5s] train_loss = 0.2385 [232.7s]

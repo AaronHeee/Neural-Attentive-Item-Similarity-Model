@@ -9,7 +9,6 @@ import cProfile
 import tensorflow as tf
 import numpy as np
 import logging
-
 from time import time
 
 from Dataset import Dataset
@@ -27,9 +26,9 @@ def parse_args():
                         help='Choose a dataset.')
     parser.add_argument('--epochs', type=int, default=100,
                         help='Number of epochs.')
-    parser.add_argument('--batch_size', type=int, default=256,
+    parser.add_argument('--batch_size', type=int, default=2048,
                         help='Batch size.')
-    parser.add_argument('--embed_size', type=int, default=8,
+    parser.add_argument('--embed_size', type=int, default=16,
                         help='Embedding size.')
     parser.add_argument('--regs', nargs='?', default='[1e-7,1e-7]',
                         help='Regularization for user and item embeddings.')
@@ -45,8 +44,8 @@ class FISM:
 
     def __init__(self, num_items, dataset_name, batch_size, learning_rate, embedding_size, alpha, regs):
         self.num_items = num_items
-        self.dataset_name = dataset_name
         self.batch_size = batch_size
+        self.dataset_name =dataset_name
         self.learning_rate = learning_rate
         self.embedding_size = embedding_size
         self.alpha = alpha
@@ -63,11 +62,13 @@ class FISM:
 
     def _create_variables(self):
         with tf.name_scope("embedding"):  # The embedding initialization is unknown now
-            self.c1 = tf.Variable(tf.truncated_normal(shape=[self.num_items, self.embedding_size], mean=0.0, stddev=0.01), dtype=tf.float32, name='c1')
-            self.c2 = tf.constant(0.0, tf.float32, [1, self.embedding_size])
-            self.embedding_Q_ = tf.concat(0, [self.c1, self.c2], name='embedding_Q_')
-            self.embedding_Q = tf.Variable(tf.truncated_normal(shape=[self.num_items, self.embedding_size], mean=0.0, stddev=0.01), name='embedding_Q', dtype=tf.float32)
-            self.bias = tf.Variable(tf.zeros(self.num_items), name='bias')
+            self.c1 = tf.Variable(tf.truncated_normal(shape=[self.num_items, self.embedding_size], mean=0.0, stddev=0.01), #why [0, 3707)?
+                                                 name='c1', dtype=tf.float32)
+            self.c2 = tf.constant(0.0, tf.float32, [1, self.embedding_size], name='c2' )
+            self.embedding_Q_ = tf.concat([self.c1,self.c2], 0, name='embedding_Q_')
+            self.embedding_Q = tf.Variable(tf.truncated_normal(shape=[self.num_items, self.embedding_size], mean=0.0, stddev=0.01),
+                                                                name='embedding_Q', dtype=tf.float32)
+            self.bias = tf.Variable(tf.zeros(self.num_items),name='bias')
 
     def _create_inference(self):
         with tf.name_scope("inference"):
@@ -79,7 +80,7 @@ class FISM:
 
     def _create_loss(self):
         with tf.name_scope("loss"):
-            self.loss = tf.contrib.losses.log_loss(self.output, self.labels) + \
+            self.loss = tf.losses.log_loss(self.labels, self.output) + \
                         self.lambda_bilinear*tf.reduce_sum(tf.square(self.embedding_Q)) + self.gamma_bilinear*tf.reduce_sum(tf.square(self.embedding_Q_))
             # self.loss = tf.nn.l2_loss(self.labels - self.output) + \
             #             self.lambda_bilinear * tf.reduce_sum(tf.square(self.embedding_Q)) + self.gamma_bilinear * tf.reduce_sum(tf.square(self.embedding_Q_))
@@ -98,23 +99,25 @@ class FISM:
 
 def training(model, dataset, batch_size, epochs, num_negatives):
     logging.info("begin training the FISM model...")
-    #save_dict = {'c1': model.c1, 
-    #             'embedding_Q': model.embedding_Q,
-    #             'bias': model.bias}
-    #saver = tf.train.Saver(save_dict, write_version = tf.train.SaverDef.V2)
-    #mkdir('checkpoints') #undifined
+    saver = tf.train.Saver({'c1':model.c1, 'embedding_Q':model.embedding_Q, 'bias':model.bias})
+
+    weight_path = 'Pretrain/%s/weights' % model.dataset_name
     ckpt_path = 'Checkpoints/FISM/lr%.4f_bs%d_%s' % (model.learning_rate, model.batch_size, model.dataset_name)
+
     with tf.Session() as sess:
 
-        #ckpt = tf.train.get_checkpoint_state(ckpt_path)
+        #ckpt = tf.train.get_checkpoint_state('Checkpoints/FISM/checkpoint')
         #if ckpt and ckpt.model_checkpoint_path:
-            #saver.restore(sses, ckpt.model_checkpoint_path)
-            #logging.info("restored")
-            #print "restored"
+        #    saver.restore(sess, ckpt.model_checkpoint_path)
+        #    logging.info("restored")
+        #    print "restored"
         #else:
-        sess.run(tf.initialize_all_variables())
-        #writer = tf.summary.FileWriter('./graphs', sess.graph)
-        #writer.close()
+        sess.run(tf.global_variables_initializer())
+        logging.info("initialized")
+        print "initialized"
+
+        # writer = tf.summary.FileWriter('./graphs', sess.graph)
+        # writer.close()
 
         data = Data(dataset.trainMatrix, dataset.trainList, batch_size, num_negatives)
         # model, sess, trainList, testRatings, testNegatives,
@@ -123,49 +126,52 @@ def training(model, dataset, batch_size, epochs, num_negatives):
         index = 0
         total_loss = 0.0
         epoch_count = 0
-        
+
         batch_begin = time()
         data.data_shuffle()
         batch_time = time() - batch_begin
-        
+
         train_begin = time()
 
         while epoch_count < epochs:
 
             if data.last_batch:
                 train_time = time() - train_begin
-                
+
                 loss_begin = time()
                 train_loss = training_loss(model, sess, data)
                 loss_time = time() - loss_begin
-                
+
                 eval_begin = time()
                 (hits, ndcgs, losses) = evaluate.eval()
                 hr, ndcg, test_loss = np.array(hits).mean(), np.array(ndcgs).mean(), np.array(losses).mean()
                 eval_time = time() - eval_begin
-                
-                logging.info("Epoch %d [%.1fs + %.1fs]: HR = %.4f, NDCG = %.4f, loss = %.4f [%.1fs] train_loss = %.4f [%.1fs]" % (epoch_count, batch_time, train_time, hr, ndcg, test_loss, eval_time, train_loss, loss_time))
-                print "Epoch %d [%.1fs + %.1fs]: HR = %.4f, NDCG = %.4f, loss = %.4f [%.1fs] train_loss = %.4f [%.1fs]" % (epoch_count, batch_time, train_time, hr, ndcg, test_loss, eval_time, train_loss, loss_time)
+
+                logging.info(
+                    "Epoch %d [%.1fs + %.1fs]: HR = %.4f, NDCG = %.4f, loss = %.4f [%.1fs] train_loss = %.4f [%.1fs]" % (
+                    epoch_count, batch_time, train_time, hr, ndcg, test_loss, eval_time, train_loss, loss_time))
+                print "Epoch %d [%.1fs + %.1fs]: HR = %.4f, NDCG = %.4f, loss = %.4f [%.1fs] train_loss = %.4f [%.1fs]" % (
+                    epoch_count, batch_time, train_time, hr, ndcg, test_loss, eval_time, train_loss, loss_time)
+
                 batch_begin = time()
                 data.data_shuffle()
                 epoch_count += 1
                 batch_time = time() - batch_begin
- 
+
                 train_begin = time()
- 
-            #saver.save(sess, ckpt_path, global_step = index)
+
+            saver.save(sess, weight_path, global_step = index)
             training_batch(index, model, sess, data)
-            
+
             index += 1
-            #if epoch_count == 1:
-            #    break
+
 
 # @profile
 def training_batch(index, model, sess, data):
     user_input, num_idx, item_input, labels = data.batch_gen(index)
-    feed_dict = {model.user_input: user_input, model.num_idx: num_idx[:, None], model.item_input: item_input[:, None], model.labels: labels[:, None]}
-    batch_loss, _ = sess.run([model.loss, model.optimizer], feed_dict)
-
+    feed_dict = {model.user_input: user_input, model.num_idx: num_idx[:, None], model.item_input: item_input[:, None],
+                 model.labels: labels[:, None]}
+    sess.run([model.loss, model.optimizer], feed_dict)
 
 def training_loss(model, sess, data):
     index = 0
@@ -177,13 +183,14 @@ def training_loss(model, sess, data):
         index += 1
     return train_loss / index
 
+#(self, num_items, batch_size, learning_rate, embedding_size, lambda_bilinear, gamma_bilinear)
 if __name__=='__main__':
 
     args = parse_args()
-    logging.basicConfig(filename="Log/FISM/log_lr%.4f_bs%d_%s.log" %(args.lr, args.batch_size, args.dataset), level = logging.INFO)
-    logging.info('----------------------------------------------------------')
     regs = eval(args.regs)
+    logging.basicConfig(filename="Log/FISM/log_lr%.4f_bs%d_%s_%.1f" %(args.lr, args.batch_size, args.dataset, args.alpha), level = logging.INFO)
+    logging.info('----------------------------------------------------------')
     dataset = Dataset(args.path + args.dataset)
-    model = FISM(dataset.num_items, args.dataset, args.batch_size, args.lr, args.embed_size, args.alpha, regs)
+    model = FISM(dataset.num_items,args.dataset,args.batch_size, args.lr, args.embed_size, args.alpha, regs)
     model.build_graph()
     training(model, dataset, args.batch_size, args.epochs, args.num_neg)

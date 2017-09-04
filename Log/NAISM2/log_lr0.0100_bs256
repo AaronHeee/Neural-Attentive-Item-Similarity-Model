@@ -1,6 +1,0 @@
-INFO:root:already build the computing graph...
-INFO:root:begin training the NAISM2 model...
-INFO:root:initialized
-INFO:root:Epoch 0 [73.5s + 380.1s]: HR = 0.0932, NDCG = 0.0419, loss = nan [107.4s] train_loss = nan [125.9s]
-INFO:root:Epoch 1 [73.9s + 373.2s]: HR = 0.0932, NDCG = 0.0419, loss = nan [107.8s] train_loss = nan [126.0s]
-INFO:root:Epoch 2 [74.5s + 371.9s]: HR = 0.0932, NDCG = 0.0419, loss = nan [106.2s] train_loss = nan [124.1s]

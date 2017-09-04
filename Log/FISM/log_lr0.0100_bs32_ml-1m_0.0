@@ -4,3 +4,8 @@ INFO:root:begin training the FISM model...
 INFO:root:initialized
 INFO:root:Epoch 0 [419.1s + 1693.1s]: HR = 0.6026, NDCG = 0.3499, loss = 0.2264 [16.2s] train_loss = 0.2910 [694.0s]
 INFO:root:Epoch 1 [415.7s + 1664.6s]: HR = 0.6281, NDCG = 0.3643, loss = 0.2134 [17.4s] train_loss = 0.2800 [701.8s]
+INFO:root:Epoch 2 [417.4s + 1404.4s]: HR = 0.6344, NDCG = 0.3681, loss = 0.2082 [15.1s] train_loss = 0.2746 [667.9s]
+INFO:root:Epoch 3 [414.0s + 1401.8s]: HR = 0.6406, NDCG = 0.3741, loss = 0.2045 [17.4s] train_loss = 0.2714 [673.4s]
+INFO:root:Epoch 4 [412.8s + 1113.3s]: HR = 0.6444, NDCG = 0.3777, loss = 0.2012 [18.1s] train_loss = 0.2687 [698.9s]
+INFO:root:Epoch 5 [412.7s + 1113.2s]: HR = 0.6493, NDCG = 0.3817, loss = 0.1987 [17.8s] train_loss = 0.2669 [693.7s]
+INFO:root:Epoch 6 [410.2s + 1110.9s]: HR = 0.6510, NDCG = 0.3828, loss = 0.1961 [17.9s] train_loss = 0.2653 [673.3s]
