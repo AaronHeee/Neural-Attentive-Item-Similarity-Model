@@ -86,122 +86,21 @@ class Dataset(object):
         lists, items = [], []
         with open(filename, "r") as f:
             line = f.readline()
+            index = 0
             while line != None and line != "":
                 arr = line.split("\t")
                 u, i = int(arr[0]), int(arr[1])
                 if u_ < u:
+                    index = 0
                     lists.append(items)
                     items = []
                     u_ += 1
-                items.append(i)
+                index += 1
+                if index<300:
+                    items.append(i)
                 line = f.readline()
         lists.append(items)
         print "already load the trainList..."
         return lists
 
-class Data:
-    '''
-    Split the dataset into batches
-    Represent user via the items' idx rated by user
-    The num of items of batch matrix is determined by the longest user vector
-    '''
 
-    def __init__(self, trainMatrix, trainList, batch_size, num_negatives):
-        self.train = trainMatrix
-        self.list = trainList
-        self.num_negatives = num_negatives
-        self.batch_size = batch_size
-        self.num_items, self.user_input, self.item_input, self.labels = self._get_train_data()
-        self.iterations = len(self.user_input)
-        self.index = np.arange(self.iterations)
-        self.num_batch = self.iterations / self.batch_size
-        self.last_batch = False
-        # self.epoch = 0
-
-    # def batch(self, i, IsOptimize):
-    #     i = int(i % self.num_batch)
-    #     # shuffle the dataset every epoch
-    #     self.flag = ( i+1 == self.num_batch ) #judge the train loss batch is over or not
-    #     if IsOptimize:
-    #         if self.flag:
-    #             self.epoch += 1
-    #             self.num_items, self.user_input, self.item_input, self.labels = self._get_train_data()
-    #             self.index_ = self.index
-    #             np.random.shuffle(self.index)
-    #         return self.get_train_batch(self.index, i)
-    #     else:
-    #         return self.get_train_batch(self.index_,i)
-
-    def batch_gen(self, i):  #generate training batch
-        i = int(i % self.num_batch)
-        self.last_batch  = ( i+1 == self.num_batch )
-        return self.user_input_list[i],self.num_idx_list[i], self.item_input_list[i], self.labels_list[i]
-
-    def data_shuffle(self):   #negative sampling and shuffle the data
-        self.num_items, self.user_input, self.item_input, self.labels = self._get_train_data()
-        np.random.shuffle(self.index)
-        self._preprocess()
-
-    def _preprocess(self):    #generate the masked batch list
-        t = time()
-        self.user_input_list,self.num_idx_list, self.item_input_list, self.labels_list = [], [], [], []
-        for i in range(self.num_batch):
-            ui, ni, ii, l = self._get_train_batch(self.index, i)
-            self.user_input_list.append(ui)
-            self.num_idx_list.append(ni)
-            self.item_input_list.append(ii)
-            self.labels_list.append(l)
-
-    def _get_train_data(self):
-        user_input, item_input, labels = [],[],[]
-        num_items = self.train.shape[1]
-        for (u, i) in self.train.keys():
-            # positive instance
-            user_items = []
-            user_input.append(u)
-            item_input.append(i)
-            labels.append(1)
-            # negative instances
-            for t in xrange(self.num_negatives):
-                j = np.random.randint(num_items)
-                while self.train.has_key((u, j)):
-                    j = np.random.randint(num_items)
-                user_input.append(u)
-                item_input.append(j)
-                labels.append(0)
-        return num_items, user_input, item_input, labels
-
-
-    def _get_train_batch(self, index,i):
-        #represent the feature of users via items rated by him/her
-        user_list, num_list, item_list, labels_list = [],[],[],[]
-        begin = i * self.batch_size
-        for idx in range(begin, begin+self.batch_size):
-            user_idx = self.user_input[index[idx]]
-            item_idx = self.item_input[index[idx]]
-            nonzero_row = self.list[user_idx]
-            nonzero_row = self._remove_item(self.num_items, nonzero_row, user_idx)
-            user_list.append(nonzero_row)
-            num_list.append(len(nonzero_row))
-            item_list.append(item_idx)
-            labels_list.append(self.labels[index[idx]])
-        user_input = np.array(self._add_mask(self.num_items, user_list, num_list))
-        num_idx = np.array(num_list)
-        item_input = np.array(item_list)
-        labels = np.array(labels_list)
-        return user_input, num_idx, item_input, labels
-
-    def _remove_item(self, feature_mask, users, item):
-        for i in range(len(users)):
-            if users[i] == item:
-                users[i] = users[-1]
-                users[-1] = feature_mask
-                break
-        return users
-
-    def _add_mask(self, feature_mask, features, num):
-        #uniformalize the length of each batch
-        num_max = max(num)
-        for i in xrange(len(features)):
-            features[i] = features[i] + [feature_mask] * (num_max - len(features[i]))
-        return features
