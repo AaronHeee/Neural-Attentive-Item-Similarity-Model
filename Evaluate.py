@@ -106,26 +106,12 @@ def _eval_one_rating(idx):
     feed_dict[_model.labels] = labels
     predictions,loss = _sess.run([_model.output,_model.loss], feed_dict = feed_dict)
 
-    for i in xrange(len(items)):
-        item = items[i]
-        map_item_score[item] = predictions[i]
-    # items.pop()
-    # Evaluate top rank list
+    neg_predict, pos_predict = predictions[:-1], predictions[-1]
+    position = (neg_predict >= pos_predict).sum()
 
-    ranklist = heapq.nlargest(_K, map_item_score, key=map_item_score.get)
-    hr = _getHitRatio(ranklist, gtItem)
-    ndcg = _getNDCG(ranklist, gtItem)
+    # calculate HR@10, NDCG@10, AUC
+    hr = position < _K
+    ndcg = math.log(2) / math.log(position+2) if hr else 0
+
     return (hr, ndcg, loss)
 
-def _getHitRatio(ranklist, gtItem):
-    for item in ranklist:
-        if item == gtItem:
-            return 1
-    return 0
-
-def _getNDCG(ranklist, gtItem):
-    for i in xrange(len(ranklist)):
-        item = ranklist[i]
-        if item == gtItem:
-            return math.log(2) / math.log(i+2)
-    return 0

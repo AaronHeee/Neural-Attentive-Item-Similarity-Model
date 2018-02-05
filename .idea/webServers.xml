@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="41876762-0d7d-4c3e-9e06-8a4b9c4bff2f" name="Citory22" url="http://citory.eatuo.com">
+        <fileTransfer host="citory.eatuo.com" port="22" rootFolder="/home/intern/data/data_nas_private/" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+      <webServer id="416caf74-a8c4-4fb0-afb4-9b36df28f2ef" name="NLP" url="http://10.88.3.60">
+        <fileTransfer host="10.88.3.60" port="1504" rootFolder="/home/shran/Others" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="1504" />
+        </fileTransfer>
+      </webServer>
+      <webServer id="17f506bb-a58d-43ee-9186-cf5d30e6899b" name="NUS" url="http://xcnd47.comp.nus.edu.sg">
+        <fileTransfer host="xcnd47.comp.nus.edu.sg" port="22" rootFolder="/home/x/xiangw/HeZhankui/" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

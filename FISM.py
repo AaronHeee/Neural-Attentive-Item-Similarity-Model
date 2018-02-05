@@ -21,6 +21,13 @@ import Evaluate as evaluate
 import argparse
 
 
+##################################
+# 1. change the evaluation ranking
+# 2. regularization changing
+#
+
+
+
 def parse_args():
     parser = argparse.ArgumentParser(description="Run FISM.")
     parser.add_argument('--path', nargs='?', default='Data/',
@@ -45,7 +52,7 @@ def parse_args():
                         help='Number of negative instances to pair with a positive instance.')
     parser.add_argument('--lr', type=float, default=0.01,
                         help='Learning rate.')
-    parser.add_argument('--pretrain', type=int, default=1,
+    parser.add_argument('--pretrain', type=int, default=0,
                         help='0: No pretrain, 1: Pretrain with updating FISM variables, 2:Pretrain with fixed FISM variables.')
     return parser.parse_args()
 
@@ -190,14 +197,14 @@ if __name__=='__main__':
 
     args = parse_args()
     regs = eval(args.regs)
-    
-    logging.basicConfig(filename="Log/%s/log_pre%dembed_size%d_reg1%.7f_reg2%.7f_%s" %(args.dataset, args.pretrain, args.embed_size, regs[0], regs[1], strftime('%Y-%m-%d%H:%M:%S', localtime())), level = logging.INFO)
+
+    log_dir = "Log/%s/" % args.dataset
+    if not os.path.exists(log_dir):
+        os.makedirs(log_dir)
+    logging.basicConfig(filename=os.path.join(log_dir, "log_pre%dembed_size%d_reg1%.7f_reg2%.7f_%s" %(args.pretrain, args.embed_size, regs[0], regs[1], strftime('%Y-%m-%d%H:%M:%S', localtime()))), level = logging.INFO)
     
     logging.info("begin training FISM model ......")
-    logging.info("dataset:%s  pretrain:%d  embedding_size:%d" 
-                % (args.dataset, args.pretrain, args.embed_size))
-    logging.info("regs:%.8f, %.8f  learning_rate:%.4f  train_loss:%d" 
-                % (regs[0], regs[1],  args.lr, args.train_loss)) 
+    logging.info(args)
 
     dataset = Dataset(args.path + args.dataset)
     model = FISM(dataset.num_items,args)

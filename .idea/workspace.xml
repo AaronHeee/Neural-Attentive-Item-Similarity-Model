@@ -2,12 +2,177 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a444625d-4cfe-4298-81a6-62d0e31399c7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NAISM2r1.2.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NAISM3r1.2.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/testTF.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/NAISMr1.2.py" afterPath="$PROJECT_DIR$/NAISM1r1.2.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/deployment.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/webServers.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/ml-1m/alpha0.0/checkpoint" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/ml-1m/alpha0.0/weights-199320.data-00000-of-00001" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/ml-1m/alpha0.0/weights-199320.index" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/ml-1m/alpha0.0/weights-199320.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/ml-1m/alpha0.0/weights-398640.data-00000-of-00001" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/ml-1m/alpha0.0/weights-398640.index" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/ml-1m/alpha0.0/weights-398640.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/ml-1m/alpha0.0/weights-597960.data-00000-of-00001" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/ml-1m/alpha0.0/weights-597960.index" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/ml-1m/alpha0.0/weights-597960.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/ml-1m/alpha0.4/checkpoint" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/ml-1m/alpha0.4/weights-120087.data-00000-of-00001" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/ml-1m/alpha0.4/weights-120087.index" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/ml-1m/alpha0.4/weights-120087.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/ml-1m/alpha0.4/weights-40029.data-00000-of-00001" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/ml-1m/alpha0.4/weights-40029.index" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/ml-1m/alpha0.4/weights-40029.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/ml-1m/alpha0.4/weights-80058.data-00000-of-00001" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/ml-1m/alpha0.4/weights-80058.index" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/ml-1m/alpha0.4/weights-80058.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/ml-1m/alpha0.5/checkpoint" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/ml-1m/alpha0.5/weights-40029.data-00000-of-00001" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/ml-1m/alpha0.5/weights-40029.index" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/ml-1m/alpha0.5/weights-40029.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/ml-1m/alpha0.5/weights-80058.data-00000-of-00001" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/ml-1m/alpha0.5/weights-80058.index" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/ml-1m/alpha0.5/weights-80058.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/ml-1m/alpha1.0/checkpoint" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/ml-1m/alpha1.0/weights-199320.data-00000-of-00001" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/ml-1m/alpha1.0/weights-199320.index" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/ml-1m/alpha1.0/weights-199320.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/ml-1m/alpha1.0/weights-398640.data-00000-of-00001" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/ml-1m/alpha1.0/weights-398640.index" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/ml-1m/alpha1.0/weights-398640.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/pinterest-20/alpha0.0/checkpoint" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/pinterest-20/alpha0.0/weights-1821171.data-00000-of-00001" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/pinterest-20/alpha0.0/weights-1821171.index" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/pinterest-20/alpha0.0/weights-1821171.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/pinterest-20/alpha0.0/weights-3642342.data-00000-of-00001" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/pinterest-20/alpha0.0/weights-3642342.index" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/pinterest-20/alpha0.0/weights-3642342.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/pinterest-20/alpha0.4/checkpoint" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/pinterest-20/alpha0.4/weights-113454.data-00000-of-00001" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/pinterest-20/alpha0.4/weights-113454.index" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/pinterest-20/alpha0.4/weights-113454.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/pinterest-20/alpha0.4/weights-226908.data-00000-of-00001" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/pinterest-20/alpha0.4/weights-226908.index" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/pinterest-20/alpha0.4/weights-226908.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/pinterest-20/alpha0.4/weights-340362.data-00000-of-00001" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/pinterest-20/alpha0.4/weights-340362.index" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/pinterest-20/alpha0.4/weights-340362.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/pinterest-20/alpha0.5/checkpoint" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/pinterest-20/alpha0.5/weights-113454.data-00000-of-00001" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/pinterest-20/alpha0.5/weights-113454.index" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/pinterest-20/alpha0.5/weights-113454.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/pinterest-20/alpha0.5/weights-226908.data-00000-of-00001" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/pinterest-20/alpha0.5/weights-226908.index" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/pinterest-20/alpha0.5/weights-226908.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/pinterest-20/alpha0.5/weights-340362.data-00000-of-00001" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/pinterest-20/alpha0.5/weights-340362.index" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/pinterest-20/alpha0.5/weights-340362.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/pinterest-20/alpha1.0/checkpoint" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/pinterest-20/alpha1.0/weights-1821171.data-00000-of-00001" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/pinterest-20/alpha1.0/weights-1821171.index" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/pinterest-20/alpha1.0/weights-1821171.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/alpha0.0/checkpoint" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/alpha0.0/weights-242700.data-00000-of-00001" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/alpha0.0/weights-242700.index" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/alpha0.0/weights-242700.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/alpha0.4/checkpoint" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/alpha0.4/weights-40029.data-00000-of-00001" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/alpha0.4/weights-40029.index" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/alpha0.4/weights-40029.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/alpha0.4/weights-80058.data-00000-of-00001" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/alpha0.4/weights-80058.index" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/alpha0.4/weights-80058.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/alpha0.5/checkpoint" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/alpha0.5/weights-40029.data-00000-of-00001" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/alpha0.5/weights-40029.index" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/alpha0.5/weights-40029.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/alpha0.5/weights-80058.data-00000-of-00001" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/alpha0.5/weights-80058.index" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/alpha0.5/weights-80058.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/checkpoint_1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-115235.data-00000-of-00001" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-115235.index" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-115235.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-116448.data-00000-of-00001" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-116448.index" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-116448.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-117661.data-00000-of-00001" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-117661.index" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-117661.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-118874.data-00000-of-00001" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-118874.index" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-118874.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-121300.data-00000-of-00001" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-121300.index" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-121300.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-12135.data-00000-of-00001" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-12135.index" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-12135.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-14562.data-00000-of-00001" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-14562.index" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-14562.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-16989.data-00000-of-00001" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-16989.index" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-16989.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-242696.data-00000-of-00001" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-242696.index" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-242696.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-242697.data-00000-of-00001" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-242697.index" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-242697.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-242698.data-00000-of-00001" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-242698.index" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-242698.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-242699.data-00000-of-00001" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-242699.index" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-242699.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-3639.data-00000-of-00001" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-3639.index" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-3639.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-4852.data-00000-of-00001" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-4852.index" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-4852.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-6065.data-00000-of-00001" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-6065.index" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-6065.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-7278.data-00000-of-00001" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-7278.index" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-7278.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-7281.data-00000-of-00001" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-7281.index" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-7281.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-8491.data-00000-of-00001" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-8491.index" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-8491.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-9708.data-00000-of-00001" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-9708.index" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-9708.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/pinterest-20/alpha0.0-1821171.data-00000-of-00001" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/pinterest-20/alpha0.0-1821171.index" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/pinterest-20/alpha0.0-1821171.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/pinterest-20/alpha0.0/checkpoint" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/pinterest-20/alpha0.0/weights-271602.data-00000-of-00001" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/pinterest-20/alpha0.0/weights-271602.index" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/pinterest-20/alpha0.0/weights-271602.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/pinterest-20/alpha0.4/checkpoint" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/pinterest-20/alpha0.4/weights-340362.data-00000-of-00001" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/pinterest-20/alpha0.4/weights-340362.index" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/pinterest-20/alpha0.4/weights-340362.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/pinterest-20/alpha0.5/checkpoint" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/pinterest-20/alpha0.5/weights-113454.data-00000-of-00001" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/pinterest-20/alpha0.5/weights-113454.index" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/pinterest-20/alpha0.5/weights-113454.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/pinterest-20/alpha0.5/weights-226908.data-00000-of-00001" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/pinterest-20/alpha0.5/weights-226908.index" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/pinterest-20/alpha0.5/weights-226908.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/pinterest-20/alpha0.5/weights-340362.data-00000-of-00001" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/pinterest-20/alpha0.5/weights-340362.index" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/pinterest-20/alpha0.5/weights-340362.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/pinterest-20/checkpoint" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Neural-Attentive-Item-Similarity-Model.iml" afterPath="$PROJECT_DIR$/.idea/Neural-Attentive-Item-Similarity-Model.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Log/NAISM1/log_lr0.0100_bs256" afterPath="$PROJECT_DIR$/Log/NAISM1/log_lr0.0100_bs256" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Evaluate.py" afterPath="$PROJECT_DIR$/Evaluate.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FISM.py" afterPath="$PROJECT_DIR$/FISM.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,13 +181,17 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/Neural_Attentive_Item_Similarity_Model$FISM.coverage" NAME="FISM Coverage Results" MODIFIED="1517555026037" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Neural_Attentive_Item_Similarity_Model$Evaluate.coverage" NAME="Evaluate Coverage Results" MODIFIED="1517555017036" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="FISMr1.2.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/FISMr1.2.py">
+      <file leaf-file-name="NAIS.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/NAIS.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3360">
-              <caret line="143" column="14" lean-forward="false" selection-start-line="143" selection-start-column="14" selection-end-line="143" selection-end-column="14" />
+            <state relative-caret-position="757">
+              <caret line="96" column="29" lean-forward="false" selection-start-line="96" selection-start-column="20" selection-end-line="96" selection-end-column="29" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
@@ -30,77 +199,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NAISM1r1.2.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NAISM1r1.2.py">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
-              <caret line="85" column="45" lean-forward="false" selection-start-line="85" selection-start-column="40" selection-end-line="85" selection-end-column="45" />
-              <folding>
-                <element signature="e#0#38#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NAISM2r1.2.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/NAISM2r1.2.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="124">
-              <caret line="85" column="65" lean-forward="false" selection-start-line="85" selection-start-column="65" selection-end-line="85" selection-end-column="65" />
-              <folding>
-                <element signature="e#0#38#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NAISM3r1.2.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NAISM3r1.2.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="543">
-              <caret line="109" column="0" lean-forward="false" selection-start-line="109" selection-start-column="0" selection-end-line="109" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#38#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="testTF.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/testTF.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="6" column="47" lean-forward="false" selection-start-line="6" selection-start-column="47" selection-end-line="6" selection-end-column="47" />
+            <state relative-caret-position="105">
+              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="log_lr0.0100_bs256" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Log/NAISM1/log_lr0.0100_bs256">
+      <file leaf-file-name="FISM.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/FISM.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="op_def_library.py" pinned="false" current-in-tab="false">
-        <entry file="file:///usr/local/lib/python2.7/dist-packages/tensorflow/python/framework/op_def_library.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18216">
-              <caret line="775" column="0" lean-forward="false" selection-start-line="775" selection-start-column="0" selection-end-line="775" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FISMr0.1.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/FISMr0.1.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4224">
-              <caret line="179" column="24" lean-forward="false" selection-start-line="179" selection-start-column="24" selection-end-line="179" selection-end-column="24" />
+            <state relative-caret-position="-296">
+              <caret line="46" column="27" lean-forward="false" selection-start-line="46" selection-start-column="27" selection-end-line="46" selection-end-column="27" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
@@ -108,23 +221,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NAISMr0.1.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NAISMr0.1.py">
+      <file leaf-file-name="NAIS.sh" pinned="true" current-in-tab="false">
+        <entry file="remoteDeploymentFS://&lt;41876762-0d7d-4c3e-9e06-8a4b9c4bff2f&gt;/zhankui/NAIS/NAIS.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1560">
-              <caret line="68" column="46" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="212" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#38#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Dataset.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Dataset.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3480">
-              <caret line="147" column="39" lean-forward="false" selection-start-line="147" selection-start-column="39" selection-end-line="147" selection-end-column="39" />
+            <state relative-caret-position="157">
+              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -148,6 +249,14 @@
       <find>batch_gen</find>
       <find>FISM</find>
       <find>stack</find>
+      <find>init_</find>
+      <find>logging</find>
+      <find>pinterest-20</find>
+      <find>algorithm 0</find>
+      <find>60</find>
+      <find>verbose</find>
+      <find>eta</find>
+      <find>algorithm</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -156,7 +265,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Evaluate.py" />
         <option value="$PROJECT_DIR$/log_lr256_bs0" />
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/Test_tf.py" />
@@ -170,14 +278,24 @@
         <option value="$PROJECT_DIR$/NAISM3r1.2.py" />
         <option value="$PROJECT_DIR$/testTF.py" />
         <option value="$PROJECT_DIR$/NAISM2r1.2.py" />
+        <option value="$PROJECT_DIR$/Evaluate.py" />
+        <option value="$PROJECT_DIR$/FISM.py" />
+        <option value="$PROJECT_DIR$/NAIS.sh" />
+        <option value="$PROJECT_DIR$/NAIS.py" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="15" />
-    <option name="y" value="9" />
-    <option name="width" value="1" />
-    <option name="height" value="61" />
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="y" value="23" />
+    <option name="width" value="1280" />
+    <option name="height" value="709" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -195,7 +313,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -203,29 +320,22 @@
               <item name="Neural-Attentive-Item-Similarity-Model" type="b2602c69:ProjectViewProjectNode" />
               <item name="Neural-Attentive-Item-Similarity-Model" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Neural-Attentive-Item-Similarity-Model" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Neural-Attentive-Item-Similarity-Model" type="462c0819:PsiDirectoryNode" />
-              <item name="Checkpoints" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Neural-Attentive-Item-Similarity-Model" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Neural-Attentive-Item-Similarity-Model" type="462c0819:PsiDirectoryNode" />
-              <item name="graphs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Neural-Attentive-Item-Similarity-Model" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Neural-Attentive-Item-Similarity-Model" type="462c0819:PsiDirectoryNode" />
-              <item name="Log" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$USER_HOME$/PycharmProjects/StudyPython" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -239,8 +349,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.NAISM2r1.2">
-    <configuration name="FISMr1.2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.FISM">
+    <configuration name="Evaluate" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -252,7 +362,26 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Neural-Attentive-Item-Similarity-Model" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/FISMr1.2.py" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Evaluate.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <configuration name="FISM" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Neural-Attentive-Item-Similarity-Model" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/FISM.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -269,24 +398,8 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Neural-Attentive-Item-Similarity-Model" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/NAISM2r1.2.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-    </configuration>
-    <configuration name="NAISMr1.2" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Neural-Attentive-Item-Similarity-Model" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/NAISM1r1.2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -303,6 +416,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Neural-Attentive-Item-Similarity-Model" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Test_tf.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -320,25 +434,26 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Neural-Attentive-Item-Similarity-Model" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/testTF.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.FISMr1.2" />
-      <item index="1" class="java.lang.String" itemvalue="Python.Test_tf" />
-      <item index="2" class="java.lang.String" itemvalue="Python.NAISMr1.2" />
-      <item index="3" class="java.lang.String" itemvalue="Python.testTF" />
-      <item index="4" class="java.lang.String" itemvalue="Python.NAISM2r1.2" />
+      <item index="0" class="java.lang.String" itemvalue="Python.Test_tf" />
+      <item index="1" class="java.lang.String" itemvalue="Python.testTF" />
+      <item index="2" class="java.lang.String" itemvalue="Python.NAISM2r1.2" />
+      <item index="3" class="java.lang.String" itemvalue="Python.FISM" />
+      <item index="4" class="java.lang.String" itemvalue="Python.Evaluate" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.NAISM2r1.2" />
-        <item index="1" class="java.lang.String" itemvalue="Python.testTF" />
-        <item index="2" class="java.lang.String" itemvalue="Python.Test_tf" />
-        <item index="3" class="java.lang.String" itemvalue="Python.NAISMr1.2" />
-        <item index="4" class="java.lang.String" itemvalue="Python.FISMr1.2" />
+        <item index="0" class="java.lang.String" itemvalue="Python.FISM" />
+        <item index="1" class="java.lang.String" itemvalue="Python.Evaluate" />
+        <item index="2" class="java.lang.String" itemvalue="Python.NAISM2r1.2" />
+        <item index="3" class="java.lang.String" itemvalue="Python.testTF" />
+        <item index="4" class="java.lang.String" itemvalue="Python.Test_tf" />
       </list>
     </recent_temporary>
   </component>
@@ -356,20 +471,29 @@
       <option name="presentableId" value="Default" />
       <updated>1503968966339</updated>
     </task>
+    <task id="LOCAL-00001" summary="speed up evaluation">
+      <created>1517807032450</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1517807032451</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="-6" width="1920" height="1086" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13927428" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32984293" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32899022" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32899022" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.48280606" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.48707592" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25282714" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32879582" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3277487" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -377,13 +501,21 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32861635" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="speed up evaluation" />
+    <option name="LAST_COMMIT_MESSAGE" value="speed up evaluation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -393,324 +525,87 @@
           <line>122</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Evaluate.py</url>
+          <line>31</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="11" />
+      <option name="time" value="12" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/FISMr1.2.py">
+    <entry file="file://$PROJECT_DIR$/Log/ml-1m/log_NAIS_concat_dataset_ml-1m_lr0.05_reg1e-04_2018-02-0311:38:42" />
+    <entry file="file://$PROJECT_DIR$/Log/ml-1m/log_NAIS_concat_dataset_ml-1m_lr0.05_reg1e-02_2018-02-0311:39:05" />
+    <entry file="file://$PROJECT_DIR$/Log/ml-1m/log_NAIS_concat_dataset_ml-1m_lr0.05_reg1e-01_2018-02-0311:39:35" />
+    <entry file="file://$PROJECT_DIR$/Log/ml-1m/log_NAIS_concat_dataset_ml-1m_lr0.05_reg1e+00_2018-02-0311:40:01" />
+    <entry file="file://$PROJECT_DIR$/Log/ml-1m/log_NAIS_concat_dataset_ml-1m_lr0.05_reg0e+00_2018-02-0311:38:17" />
+    <entry file="file://$PROJECT_DIR$/Log/ml-1m/log_NAIS_concat_dataset_ml-1m_lr0.01_reg1e-04_2018-02-0311:35:04" />
+    <entry file="file://$PROJECT_DIR$/Log/ml-1m/log_NAIS_prod_dataset_ml-1m_lr0.01_reg0e+00_2018-02-0311:17:21" />
+    <entry file="file://$PROJECT_DIR$/Log/ml-1m/log_NAIS_prod_dataset_ml-1m_lr0.01_reg1e+00_2018-02-0311:20:22" />
+    <entry file="file://$PROJECT_DIR$/Log/ml-1m/log_NAIS_prod_dataset_ml-1m_lr0.01_reg1e-01_2018-02-0311:19:28" />
+    <entry file="file://$PROJECT_DIR$/Log/ml-1m/log_NAIS_prod_dataset_ml-1m_lr0.01_reg1e-02_2018-02-0311:18:54" />
+    <entry file="file://$PROJECT_DIR$/Log/ml-1m/log_NAIS_prod_dataset_ml-1m_lr0.01_reg1e-04_2018-02-0311:17:50" />
+    <entry file="file://$PROJECT_DIR$/Log/ml-1m/log_NAIS_prod_dataset_ml-1m_lr0.05_reg0e+00_2018-02-0311:20:56" />
+    <entry file="file://$PROJECT_DIR$/Log/ml-1m/log_NAIS_prod_dataset_ml-1m_lr0.05_reg1e+00_2018-02-0311:25:35" />
+    <entry file="file://$PROJECT_DIR$/Log/ml-1m/log_NAIS_prod_dataset_ml-1m_lr0.05_reg1e-01_2018-02-0311:24:46" />
+    <entry file="file://$PROJECT_DIR$/Log/ml-1m/log_NAIS_prod_dataset_ml-1m_lr0.05_reg1e-02_2018-02-0311:24:21" />
+    <entry file="file://$PROJECT_DIR$/Log/ml-1m/log_NAIS_prod_dataset_ml-1m_lr0.05_reg1e-03_2018-02-0311:22:35" />
+    <entry file="file://$PROJECT_DIR$/Log/ml-1m/log_NAIS_prod_dataset_ml-1m_lr0.05_reg1e-04_2018-02-0311:21:46" />
+    <entry file="file://$PROJECT_DIR$/Log/pinterest-20/log_NAIS_concat_dataset_pinterest-20_lr0.01_reg1e-03_2018-02-0311:26:34" />
+    <entry file="file://$PROJECT_DIR$/Log/pinterest-20/log_NAIS_prod_dataset_pinterest-20_lr0.01_reg0e+00_2018-02-0310:41:53" />
+    <entry file="file://$PROJECT_DIR$/Log/pinterest-20/log_NAIS_prod_dataset_pinterest-20_lr0.01_reg0e+00_2018-02-0310:48:34" />
+    <entry file="file://$PROJECT_DIR$/Log/pinterest-20/log_NAIS_prod_dataset_pinterest-20_lr0.01_reg0e+00_2018-02-0310:52:03" />
+    <entry file="file://$PROJECT_DIR$/Log/pinterest-20/log_NAIS_prod_dataset_pinterest-20_lr0.01_reg1e-03_2018-02-0310:43:02" />
+    <entry file="file://$PROJECT_DIR$/Log/pinterest-20/log_NAIS_prod_dataset_pinterest-20_lr0.01_reg1e-04_2018-02-0310:42:25" />
+    <entry file="file://$PROJECT_DIR$/Log/pinterest-20/log_NAIS_prod_dataset_pinterest-20_lr0.05_reg1e-02_2018-02-0311:11:18" />
+    <entry file="file://$PROJECT_DIR$/Log/pinterest-20/log_NAIS_prod_dataset_pinterest-20_lr0.05_reg1e-02_2018-02-0311:12:30" />
+    <entry file="file://$PROJECT_DIR$/Log/pinterest-20/log_NAIS_prod_dataset_pinterest-20_lr0.05_reg1e-01_2018-02-0311:13:28" />
+    <entry file="file://$PROJECT_DIR$/Log/pinterest-20/log_NAIS_prod_dataset_pinterest-20_lr0.05_reg1e+00_2018-02-0311:15:09" />
+    <entry file="file://$PROJECT_DIR$/Log/pinterest-20/log_NAIS_prod_dataset_pinterest-20_lr0.05_reg0e+00_2018-02-0311:07:11" />
+    <entry file="file://$PROJECT_DIR$/Log/pinterest-20/log_NAIS_prod_dataset_pinterest-20_lr0.01_reg1e-04_2018-02-0310:58:14" />
+    <entry file="file://$PROJECT_DIR$/Log/pinterest-20/log_NAIS_prod_dataset_pinterest-20_lr0.01_reg1e-03_2018-02-0311:04:00" />
+    <entry file="file://$PROJECT_DIR$/Log/pinterest-20/log_NAIS_prod_dataset_pinterest-20_lr0.01_reg1e-02_2018-02-0311:04:32" />
+    <entry file="file://$PROJECT_DIR$/Log/pinterest-20/log_NAIS_prod_dataset_pinterest-20_lr0.01_reg1e-01_2018-02-0311:04:56" />
+    <entry file="file://$PROJECT_DIR$/Log/pinterest-20/log_NAIS_prod_dataset_pinterest-20_lr0.01_reg1e+00_2018-02-0311:06:22" />
+    <entry file="file://$PROJECT_DIR$/Log/pinterest-20/log_NAIS_prod_dataset_pinterest-20_lr0.01_reg0e+00_2018-02-0310:57:35" />
+    <entry file="file://$PROJECT_DIR$/Log/pinterest-20/log_NAIS_concat_dataset_pinterest-20_lr0.05_reg1e-04_2018-02-0311:31:22" />
+    <entry file="file://$PROJECT_DIR$/Log/pinterest-20/log_NAIS_concat_dataset_pinterest-20_lr0.05_reg1e-03_2018-02-0311:31:55" />
+    <entry file="file://$PROJECT_DIR$/Log/pinterest-20/log_NAIS_concat_dataset_pinterest-20_lr0.05_reg1e-02_2018-02-0311:32:23" />
+    <entry file="file://$PROJECT_DIR$/Log/pinterest-20/log_NAIS_concat_dataset_pinterest-20_lr0.05_reg1e-01_2018-02-0311:33:12" />
+    <entry file="file://$PROJECT_DIR$/Log/pinterest-20/log_NAIS_concat_dataset_pinterest-20_lr0.05_reg1e+00_2018-02-0311:33:41" />
+    <entry file="file://$PROJECT_DIR$/Log/pinterest-20/log_NAIS_concat_dataset_pinterest-20_lr0.05_reg0e+00_2018-02-0311:30:50" />
+    <entry file="file://$PROJECT_DIR$/Log/pinterest-20/log_NAIS_concat_dataset_pinterest-20_lr0.01_reg1e-02_2018-02-0311:27:02" />
+    <entry file="file://$PROJECT_DIR$/Log/pinterest-20/log_NAIS_concat_dataset_pinterest-20_lr0.01_reg1e-01_2018-02-0311:28:03" />
+    <entry file="file://$PROJECT_DIR$/Log/pinterest-20/log_NAIS_concat_dataset_pinterest-20_lr0.01_reg1e+00_2018-02-0311:28:34" />
+    <entry file="file://$PROJECT_DIR$/Log/pinterest-20/log_NAIS_concat_dataset_pinterest-20_lr0.01_reg0e+00_2018-02-0311:30:16" />
+    <entry file="file://$PROJECT_DIR$/Log/pinterest-20/log_NAIS_concat_dataset_pinterest-20_lr0.01_reg0e+00_2018-02-0311:26:07" />
+    <entry file="file://$PROJECT_DIR$/Log/pinterest-20/log_NAIS_prod_dataset_pinterest-20_lr0.05_reg1e-04_2018-02-0311:07:46" />
+    <entry file="file://$PROJECT_DIR$/Log/pinterest-20/log_NAIS_prod_dataset_pinterest-20_lr0.05_reg1e-03_2018-02-0311:08:09" />
+    <entry file="file://$PROJECT_DIR$/NAIS.sh" />
+    <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NAISM1r1.2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2352">
-          <caret line="101" column="38" lean-forward="false" selection-start-line="101" selection-start-column="38" selection-end-line="101" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Log/NAISM1/log_lr0.0100_bs256">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        <state relative-caret-position="105">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/local/lib/python2.7/dist-packages/tensorflow/python/framework/op_def_library.py">
+    <entry file="file://$PROJECT_DIR$/NAIS.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18216">
-          <caret line="775" column="0" lean-forward="false" selection-start-line="775" selection-start-column="0" selection-end-line="775" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FISMr0.1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4224">
-          <caret line="179" column="24" lean-forward="false" selection-start-line="179" selection-start-column="24" selection-end-line="179" selection-end-column="24" />
+        <state relative-caret-position="757">
+          <caret line="96" column="29" lean-forward="false" selection-start-line="96" selection-start-column="20" selection-end-line="96" selection-end-column="29" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NAISMr0.1.py">
+    <entry file="file://$PROJECT_DIR$/FISM.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1560">
-          <caret line="68" column="46" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="212" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Evaluate.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1056">
-          <caret line="48" column="51" lean-forward="false" selection-start-line="48" selection-start-column="51" selection-end-line="48" selection-end-column="51" />
-          <folding>
-            <element signature="e#305#316#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dataset.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3480">
-          <caret line="147" column="39" lean-forward="false" selection-start-line="147" selection-start-column="39" selection-end-line="147" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FISMr1.2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3336">
-          <caret line="142" column="70" lean-forward="false" selection-start-line="142" selection-start-column="70" selection-end-line="142" selection-end-column="70" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/lib/python2.7/dist-packages/tensorflow/python/framework/op_def_library.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18216">
-          <caret line="775" column="0" lean-forward="false" selection-start-line="775" selection-start-column="0" selection-end-line="775" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FISMr0.1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3744">
-          <caret line="159" column="0" lean-forward="false" selection-start-line="159" selection-start-column="0" selection-end-line="159" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NAISMr0.1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1512">
-          <caret line="66" column="45" lean-forward="false" selection-start-line="66" selection-start-column="45" selection-end-line="66" selection-end-column="45" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Evaluate.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1056">
-          <caret line="48" column="51" lean-forward="false" selection-start-line="48" selection-start-column="51" selection-end-line="48" selection-end-column="51" />
-          <folding>
-            <element signature="e#305#316#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dataset.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3096">
-          <caret line="131" column="15" lean-forward="true" selection-start-line="131" selection-start-column="15" selection-end-line="131" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FISMr1.2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3048">
-          <caret line="130" column="0" lean-forward="true" selection-start-line="130" selection-start-column="0" selection-end-line="130" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Evaluate.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1056">
-          <caret line="48" column="51" lean-forward="true" selection-start-line="48" selection-start-column="51" selection-end-line="48" selection-end-column="51" />
-          <folding>
-            <element signature="e#305#316#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/lib/python2.7/dist-packages/tensorflow/python/client/session.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27216">
-          <caret line="1151" column="0" lean-forward="false" selection-start-line="1151" selection-start-column="0" selection-end-line="1151" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dataset.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3192">
-          <caret line="135" column="35" lean-forward="true" selection-start-line="135" selection-start-column="35" selection-end-line="135" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FISMr0.1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3672">
-          <caret line="156" column="14" lean-forward="true" selection-start-line="156" selection-start-column="14" selection-end-line="156" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FISMr1.2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Evaluate.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="984">
-          <caret line="45" column="48" lean-forward="false" selection-start-line="45" selection-start-column="48" selection-end-line="45" selection-end-column="48" />
-          <folding>
-            <element signature="e#305#316#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dataset.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3216">
-          <caret line="135" column="35" lean-forward="false" selection-start-line="135" selection-start-column="35" selection-end-line="135" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/lib/python2.7/dist-packages/tensorflow/python/client/session.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27216">
-          <caret line="1151" column="0" lean-forward="false" selection-start-line="1151" selection-start-column="0" selection-end-line="1151" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/log_lr256_bs0" />
-    <entry file="file://$PROJECT_DIR$/Test_python.py" />
-    <entry file="file://$PROJECT_DIR$/Test_tf.py" />
-    <entry file="file://$PROJECT_DIR$/Evaluate.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1056">
-          <caret line="48" column="51" lean-forward="false" selection-start-line="48" selection-start-column="51" selection-end-line="48" selection-end-column="51" />
-          <folding>
-            <element signature="e#305#316#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/util/mask.py" />
-    <entry file="file:///usr/local/lib/python2.7/dist-packages/tensorflow/python/framework/op_def_library.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18216">
-          <caret line="775" column="0" lean-forward="false" selection-start-line="775" selection-start-column="0" selection-end-line="775" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FISMr0.1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4224">
-          <caret line="179" column="24" lean-forward="false" selection-start-line="179" selection-start-column="24" selection-end-line="179" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dataset.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3480">
-          <caret line="147" column="39" lean-forward="false" selection-start-line="147" selection-start-column="39" selection-end-line="147" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NAISMr0.1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1560">
-          <caret line="68" column="46" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="212" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FISMr1.2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3360">
-          <caret line="143" column="14" lean-forward="false" selection-start-line="143" selection-start-column="14" selection-end-line="143" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Log/NAISM1/log_lr0.0100_bs256">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NAISM1r1.2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="85" column="45" lean-forward="false" selection-start-line="85" selection-start-column="40" selection-end-line="85" selection-end-column="45" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testTF.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="6" column="47" lean-forward="false" selection-start-line="6" selection-start-column="47" selection-end-line="6" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NAISM3r1.2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="543">
-          <caret line="109" column="0" lean-forward="false" selection-start-line="109" selection-start-column="0" selection-end-line="109" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NAISM2r1.2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="85" column="65" lean-forward="false" selection-start-line="85" selection-start-column="65" selection-end-line="85" selection-end-column="65" />
+        <state relative-caret-position="-296">
+          <caret line="46" column="27" lean-forward="false" selection-start-line="46" selection-start-column="27" selection-end-line="46" selection-end-column="27" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
