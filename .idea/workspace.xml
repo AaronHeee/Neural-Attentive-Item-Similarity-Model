@@ -2,177 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a444625d-4cfe-4298-81a6-62d0e31399c7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/deployment.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/webServers.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/ml-1m/alpha0.0/checkpoint" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/ml-1m/alpha0.0/weights-199320.data-00000-of-00001" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/ml-1m/alpha0.0/weights-199320.index" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/ml-1m/alpha0.0/weights-199320.meta" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/ml-1m/alpha0.0/weights-398640.data-00000-of-00001" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/ml-1m/alpha0.0/weights-398640.index" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/ml-1m/alpha0.0/weights-398640.meta" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/ml-1m/alpha0.0/weights-597960.data-00000-of-00001" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/ml-1m/alpha0.0/weights-597960.index" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/ml-1m/alpha0.0/weights-597960.meta" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/ml-1m/alpha0.4/checkpoint" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/ml-1m/alpha0.4/weights-120087.data-00000-of-00001" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/ml-1m/alpha0.4/weights-120087.index" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/ml-1m/alpha0.4/weights-120087.meta" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/ml-1m/alpha0.4/weights-40029.data-00000-of-00001" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/ml-1m/alpha0.4/weights-40029.index" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/ml-1m/alpha0.4/weights-40029.meta" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/ml-1m/alpha0.4/weights-80058.data-00000-of-00001" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/ml-1m/alpha0.4/weights-80058.index" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/ml-1m/alpha0.4/weights-80058.meta" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/ml-1m/alpha0.5/checkpoint" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/ml-1m/alpha0.5/weights-40029.data-00000-of-00001" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/ml-1m/alpha0.5/weights-40029.index" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/ml-1m/alpha0.5/weights-40029.meta" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/ml-1m/alpha0.5/weights-80058.data-00000-of-00001" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/ml-1m/alpha0.5/weights-80058.index" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/ml-1m/alpha0.5/weights-80058.meta" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/ml-1m/alpha1.0/checkpoint" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/ml-1m/alpha1.0/weights-199320.data-00000-of-00001" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/ml-1m/alpha1.0/weights-199320.index" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/ml-1m/alpha1.0/weights-199320.meta" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/ml-1m/alpha1.0/weights-398640.data-00000-of-00001" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/ml-1m/alpha1.0/weights-398640.index" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/ml-1m/alpha1.0/weights-398640.meta" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/pinterest-20/alpha0.0/checkpoint" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/pinterest-20/alpha0.0/weights-1821171.data-00000-of-00001" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/pinterest-20/alpha0.0/weights-1821171.index" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/pinterest-20/alpha0.0/weights-1821171.meta" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/pinterest-20/alpha0.0/weights-3642342.data-00000-of-00001" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/pinterest-20/alpha0.0/weights-3642342.index" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/pinterest-20/alpha0.0/weights-3642342.meta" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/pinterest-20/alpha0.4/checkpoint" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/pinterest-20/alpha0.4/weights-113454.data-00000-of-00001" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/pinterest-20/alpha0.4/weights-113454.index" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/pinterest-20/alpha0.4/weights-113454.meta" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/pinterest-20/alpha0.4/weights-226908.data-00000-of-00001" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/pinterest-20/alpha0.4/weights-226908.index" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/pinterest-20/alpha0.4/weights-226908.meta" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/pinterest-20/alpha0.4/weights-340362.data-00000-of-00001" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/pinterest-20/alpha0.4/weights-340362.index" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/pinterest-20/alpha0.4/weights-340362.meta" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/pinterest-20/alpha0.5/checkpoint" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/pinterest-20/alpha0.5/weights-113454.data-00000-of-00001" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/pinterest-20/alpha0.5/weights-113454.index" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/pinterest-20/alpha0.5/weights-113454.meta" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/pinterest-20/alpha0.5/weights-226908.data-00000-of-00001" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/pinterest-20/alpha0.5/weights-226908.index" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/pinterest-20/alpha0.5/weights-226908.meta" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/pinterest-20/alpha0.5/weights-340362.data-00000-of-00001" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/pinterest-20/alpha0.5/weights-340362.index" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/pinterest-20/alpha0.5/weights-340362.meta" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/pinterest-20/alpha1.0/checkpoint" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/pinterest-20/alpha1.0/weights-1821171.data-00000-of-00001" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/pinterest-20/alpha1.0/weights-1821171.index" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretrain/pinterest-20/alpha1.0/weights-1821171.meta" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/alpha0.0/checkpoint" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/alpha0.0/weights-242700.data-00000-of-00001" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/alpha0.0/weights-242700.index" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/alpha0.0/weights-242700.meta" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/alpha0.4/checkpoint" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/alpha0.4/weights-40029.data-00000-of-00001" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/alpha0.4/weights-40029.index" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/alpha0.4/weights-40029.meta" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/alpha0.4/weights-80058.data-00000-of-00001" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/alpha0.4/weights-80058.index" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/alpha0.4/weights-80058.meta" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/alpha0.5/checkpoint" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/alpha0.5/weights-40029.data-00000-of-00001" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/alpha0.5/weights-40029.index" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/alpha0.5/weights-40029.meta" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/alpha0.5/weights-80058.data-00000-of-00001" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/alpha0.5/weights-80058.index" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/alpha0.5/weights-80058.meta" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/checkpoint_1" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-115235.data-00000-of-00001" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-115235.index" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-115235.meta" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-116448.data-00000-of-00001" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-116448.index" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-116448.meta" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-117661.data-00000-of-00001" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-117661.index" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-117661.meta" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-118874.data-00000-of-00001" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-118874.index" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-118874.meta" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-121300.data-00000-of-00001" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-121300.index" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-121300.meta" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-12135.data-00000-of-00001" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-12135.index" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-12135.meta" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-14562.data-00000-of-00001" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-14562.index" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-14562.meta" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-16989.data-00000-of-00001" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-16989.index" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-16989.meta" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-242696.data-00000-of-00001" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-242696.index" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-242696.meta" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-242697.data-00000-of-00001" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-242697.index" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-242697.meta" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-242698.data-00000-of-00001" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-242698.index" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-242698.meta" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-242699.data-00000-of-00001" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-242699.index" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-242699.meta" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-3639.data-00000-of-00001" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-3639.index" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-3639.meta" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-4852.data-00000-of-00001" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-4852.index" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-4852.meta" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-6065.data-00000-of-00001" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-6065.index" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-6065.meta" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-7278.data-00000-of-00001" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-7278.index" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-7278.meta" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-7281.data-00000-of-00001" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-7281.index" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-7281.meta" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-8491.data-00000-of-00001" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-8491.index" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-8491.meta" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-9708.data-00000-of-00001" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-9708.index" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/ml-1m/weights-9708.meta" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/pinterest-20/alpha0.0-1821171.data-00000-of-00001" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/pinterest-20/alpha0.0-1821171.index" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/pinterest-20/alpha0.0-1821171.meta" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/pinterest-20/alpha0.0/checkpoint" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/pinterest-20/alpha0.0/weights-271602.data-00000-of-00001" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/pinterest-20/alpha0.0/weights-271602.index" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/pinterest-20/alpha0.0/weights-271602.meta" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/pinterest-20/alpha0.4/checkpoint" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/pinterest-20/alpha0.4/weights-340362.data-00000-of-00001" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/pinterest-20/alpha0.4/weights-340362.index" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/pinterest-20/alpha0.4/weights-340362.meta" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/pinterest-20/alpha0.5/checkpoint" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/pinterest-20/alpha0.5/weights-113454.data-00000-of-00001" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/pinterest-20/alpha0.5/weights-113454.index" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/pinterest-20/alpha0.5/weights-113454.meta" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/pinterest-20/alpha0.5/weights-226908.data-00000-of-00001" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/pinterest-20/alpha0.5/weights-226908.index" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/pinterest-20/alpha0.5/weights-226908.meta" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/pinterest-20/alpha0.5/weights-340362.data-00000-of-00001" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/pinterest-20/alpha0.5/weights-340362.index" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/pinterest-20/alpha0.5/weights-340362.meta" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pretraining/pinterest-20/checkpoint" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Neural-Attentive-Item-Similarity-Model.iml" afterPath="$PROJECT_DIR$/.idea/Neural-Attentive-Item-Similarity-Model.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Evaluate.py" afterPath="$PROJECT_DIR$/Evaluate.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FISM.py" afterPath="$PROJECT_DIR$/FISM.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -209,7 +40,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FISM.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FISM.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FISM.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-296">
@@ -217,6 +48,16 @@
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="5" lean-forward="false" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -283,6 +124,7 @@
         <option value="$PROJECT_DIR$/NAIS.sh" />
         <option value="$PROJECT_DIR$/NAIS.py" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -483,13 +325,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32737276" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32899022" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32899022" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.48280606" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.48280606" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.48707592" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25282714" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -501,7 +345,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32861635" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -536,7 +379,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Log/ml-1m/log_NAIS_concat_dataset_ml-1m_lr0.05_reg1e-04_2018-02-0311:38:42" />
     <entry file="file://$PROJECT_DIR$/Log/ml-1m/log_NAIS_concat_dataset_ml-1m_lr0.05_reg1e-02_2018-02-0311:39:05" />
     <entry file="file://$PROJECT_DIR$/Log/ml-1m/log_NAIS_concat_dataset_ml-1m_lr0.05_reg1e-01_2018-02-0311:39:35" />
     <entry file="file://$PROJECT_DIR$/Log/ml-1m/log_NAIS_concat_dataset_ml-1m_lr0.05_reg1e+00_2018-02-0311:40:01" />
@@ -609,6 +451,14 @@
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="5" lean-forward="false" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
