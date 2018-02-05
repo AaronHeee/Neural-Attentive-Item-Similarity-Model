@@ -37,7 +37,7 @@ def parse_args():
                         help='Embedding size.')
     parser.add_argument('--data_alpha', type=float, default=0,
                         help='Index of coefficient of embedding vector')
-    parser.add_argument('--regs', nargs='?', default='[1e-7,1e-7,0]',
+    parser.add_argument('--regs', nargs='?', default='[1e-7,1e-7,1e-5]',
                         help='Regularization for user and item embeddings.')
     parser.add_argument('--alpha', type=float, default=0,
                         help='Index of coefficient of embedding vector')
@@ -248,18 +248,20 @@ if __name__=='__main__':
 
     args = parse_args()
     regs = eval(args.regs)
-    
-    logging.basicConfig(filename="Log/%s/log_beta%.2f_pre%dweight_size%d_reg%.7f_%s" %(args.dataset, args.beta, args.pretrain, args.weight_size, regs[2], strftime('%Y-%m-%d%H:%M:%S', localtime())), level = logging.INFO)
-    
-    if args.algorithm == 0:
-        logging.info("begin training NAIS_prod model ......")
-    else:
-        logging.info("begin training NAIS_concat model ......")
 
-    logging.info("dataset:%s  pretrain:%d   weight_size:%d  embedding_size:%d" 
-                % (args.dataset, args.pretrain,  args.weight_size, args.embed_size))
-    logging.info("regs:%.8f, %.8f, %.8f  beta:%.1f  learning_rate:%.4f  train_loss:%d  activation:%d" 
-                % (regs[0], regs[1], regs[2], args.beta, args.lr, args.train_loss, args.activation)) 
+    algo = "NAIS_concat" if args.algorithm else "NAIS_prod"
+
+    log_dir = "Log/%s/" % args.dataset
+    if not os.path.exists(log_dir):
+        os.makedirs(log_dir)
+    logging.basicConfig(filename=os.path.join(log_dir, "log_%s_dataset_%s_lr%.2f_reg%.0e_%s" %
+                                              (algo, args.dataset, args.lr, regs[2],
+                                               strftime('%Y-%m-%d%H:%M:%S', localtime()))), level=logging.INFO)
+
+    logging.info("begin training %s model ......" % algo)
+
+    print args
+    logging.info(args)
 
     dataset = Dataset(args.path + args.dataset)
     model = NAIS(dataset.num_items,args)
