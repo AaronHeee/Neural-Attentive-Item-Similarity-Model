@@ -4,7 +4,7 @@ This is our official implementation for the paper:
 
 **NAIS: Neural Attentive Item Similarity Model for Recommendation** 
 Xiangnan He, Zhankui He, Jingkuan Song, Zhenguang Liu, Yu-Gang Jiang, & Tat-Seng Chua 
-IEEE Transactions on Knowledge and Data Engineering (under reviewing)   
+IEEE Transactions on Knowledge and Data Engineering (TKDE 2018)
 
 Two collaborative filtering models: **NAIS_concat** and **NAIS_prod**. To target the models for implicit feedback and ranking task, we optimize them using log loss with negative sampling.
 
