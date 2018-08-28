@@ -8,6 +8,8 @@ import scipy.sparse as sp
 import numpy as np
 from time import time
 
+ITEM_CLIP = 300 
+
 class Dataset(object):
     '''
     Loading the data file
@@ -96,7 +98,7 @@ class Dataset(object):
                     items = []
                     u_ += 1
                 index += 1
-                if index<300:
+                if index<ITEM_CLIP:
                     items.append(i)
                 line = f.readline()
         lists.append(items)
