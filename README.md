@@ -44,6 +44,8 @@ TensorFlow >= r1.0
 
 Numpy >= 1.12
 
+PS. For your reference, our server environment is Intel Xeon CPU E5-2630 @ 2.20 GHz and 64 GiB memory. We recommend your free memory is more than 16 GiB to reproduce our experiments (and we are still trying to reduce the memory cost...).
+
 ## Dataset
 
 We provide two processed datasets: MovieLens 1 Million (ml-1m) and Pinterest (pinterest-20) in Data/
