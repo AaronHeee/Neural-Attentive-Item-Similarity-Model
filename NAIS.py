@@ -142,7 +142,7 @@ class NAIS:
 
             self.embedding_q = tf.reduce_sum(self.embedding_q, 1)
             self.bias_i = tf.nn.embedding_lookup(self.bias, self.item_input)
-            self.coeff = tf.pow(self.num_idx, tf.constant(self.alpha, tf.float32, [1]))
+            self.coeff = tf.pow(self.num_idx, -tf.constant(self.alpha, tf.float32, [1]))
             self.output = tf.sigmoid(self.coeff * tf.expand_dims(tf.reduce_sum(self.embedding_p*self.embedding_q, 1),1) + self.bias_i)
     
     def _create_loss(self):
