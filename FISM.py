@@ -54,6 +54,8 @@ def parse_args():
                         help='Learning rate.')
     parser.add_argument('--pretrain', type=int, default=0,
                         help='0: No pretrain, 1: Pretrain with updating FISM variables, 2:Pretrain with fixed FISM variables.')
+    parser.add_argument('--save', type=int, default=1,
+                        help='save the parameters of FISM or not')
     return parser.parse_args()
 
 class FISM:
@@ -115,10 +117,12 @@ class FISM:
         self._create_optimizer()
         logging.info("already build the computing graph...")
 
-def training(flag, model, dataset,  epochs, num_negatives):
+def training(flag, model, dataset,  epochs, num_negatives, save):
     
     saver = tf.train.Saver({'c1':model.c1,'embedding_Q':model.embedding_Q, 'bias':model.bias})
     weight_path = 'Pretraining/%s/alpha%.1f' % (model.dataset_name, model.alpha)
+    if not os.path.exists(weight_path) and save:
+        os.makedirs(weight_path)
     
     with tf.Session() as sess:
         # pretrain nor not
@@ -177,6 +181,10 @@ def training(flag, model, dataset,  epochs, num_negatives):
             np.random.shuffle(batch_index)
             batch_time = time() - batch_begin
 
+            if save:
+                print("Saving model embedding....")
+                saver.save(sess, weight_path, global_step=epoch_count)
+
 def training_batch(batch_index, model, sess, batches):
     for index in batch_index:
         user_input, num_idx, item_input, labels = data.batch_gen(batches, index)
@@ -209,4 +217,4 @@ if __name__=='__main__':
     dataset = Dataset(args.path + args.dataset)
     model = FISM(dataset.num_items,args)
     model.build_graph()
-    training(args.pretrain, model, dataset, args.epochs, args.num_neg)
+    training(args.pretrain, model, dataset, args.epochs, args.num_neg, args.save)
