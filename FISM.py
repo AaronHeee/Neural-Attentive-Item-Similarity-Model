@@ -121,9 +121,7 @@ def training(flag, model, dataset,  epochs, num_negatives, save):
     
     saver = tf.train.Saver({'c1':model.c1,'embedding_Q':model.embedding_Q, 'bias':model.bias})
     weight_path = 'Pretraining/%s/alpha%.1f' % (model.dataset_name, model.alpha)
-    if not os.path.exists(weight_path) and save:
-        os.makedirs(weight_path)
-    
+
     with tf.Session() as sess:
         # pretrain nor not
         if flag != 0:
